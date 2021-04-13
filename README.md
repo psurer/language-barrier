@@ -6,8 +6,8 @@ Project Title: Language Barrier
 
 Project Description:Have children learn other languages
 
-User Story: As a parent/teacher who wishes for their child to learn a new language, 
-I want an app that allows me to translate basic words into the language of choice
+User Story: As a parent/teacher who wishes for their child to learn a new language. 
+I want an app that allows me to translate basic words into the language of choice,
 So that the child can learn the fundamentals of a language
 
 
