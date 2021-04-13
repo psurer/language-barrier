@@ -1,6 +1,6 @@
 # language-barrier
-app that allows translation of basic words into the language of choice
-Project #1 
+Project #1 app that allows translation of basic words into the language of choice
+
 
 Project Title: Language Barrier
 
