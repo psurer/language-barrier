@@ -42,16 +42,13 @@
    </div> 
    <form>
   <h5> How many words do you want to learn today?</h5>
-  <input type="number" value="Submit">
+  <!-- added input type of numbers, so browser doesn't let user type letters -->
+  <!-- added onchange handler, when onchange event happens, numberOfWordsChanged
+       function is called, and we get the number entered by the user -->
+  <input type="number" placeholder="Pick from 1-10 words to learn" 
+         onchange="numberOfWordsChanged(event)"/>
   </form>
-
-
-
-  
-
   </div>
-
-
 </div>
 
 
@@ -60,6 +57,6 @@
 
 </p>
 <!-- Javscript Style Sheet-->
-<script type="text/javascript" src="JS/script.js"></script>
+<script type="text/javascript" src="Assets/JS/script.js"></script>
 </body>
 </html>
