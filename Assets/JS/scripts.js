@@ -34,6 +34,7 @@ $("#select-bar").on("change", function(event){
     }
 })
 
+//login button
 document.getElementById("fname-submit").addEventListener("click", checkFname)
 
 
