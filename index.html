@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/CSS/styles.css" />
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+ 
+ 
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-1">Language Barrier</h1>
+    <p id=jumboDay class="lead"></p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+
+
+<div id="Login Page" class="w3-container">
+  <!-- Header -->
+  <header id="headerID"> Language Barrier Login </header>
+  <!-- Name input -->
+  <form id="Login_Info">
+    <label for="fname">Full name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <input type="button" id="fname-submit" value="Submit">
+  </form>
+
+<!-- Select languages Option 1 -->
+  <select class="w3-select" name="option" >
+    <option value="" disabled selected>Which language do you want to learn today?</option>
+    <option value="1">English</option>
+    <option value="2">Spanish</option>
+    <option value="3">French</option>
+  </select> 
+<!-- Select Languages option 2-->
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Select the languages</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">English</a>
+      <a href="#" class="w3-bar-item w3-button">Spanish</a>
+      <a href="#" class="w3-bar-item w3-button">French</a>
+    </div>
+   </div> 
+   <form>
+  <h5> How many words do you want to learn today?</h5>
+  <!-- added input type of numbers, so browser doesn't let user type letters -->
+  <!-- added onchange handler, when onchange event happens, numberOfWordsChanged
+       function is called, and we get the number entered by the user -->
+  <input id= "languageInput" type="number" placeholder="Pick from 1-10 words to learn" 
+         onchange="numberOfWordsChanged(event)"/>
+  </form>
+  </div>
+</div>
+
+
+  
+</div>
+
+</p>
+<!-- Javscript Style Sheet-->
+<script type="text/javascript" src="Assets/JS/scripts.js"></script>
+</body>
+</html>
