@@ -1,8 +1,4 @@
 var userLanguage;
-
-
-
-
 var spanishApiKey="https://dictionaryapi.com/api/v3/references/spanish/json/test?key=b5ae1ad4-6953-4b14-a6e0-f473b7f23015"
 
 fetch(spanishApiKey)
