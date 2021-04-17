@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Assets/CSS/styles.css" />
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,12 +37,12 @@
 
 <div id="Login Page" class="w3-container">
   <!-- Header -->
-  <header> Language Barrier Login </header>
+  <header id="headerID"> Language Barrier Login </header>
   <!-- Name input -->
   <form id="Login_Info">
     <label for="fname">Full name:</label><br>
     <input type="text" id="fname" name="fname"><br>
-    <input type="submit" value="Submit">
+    <input id="submitButton" type="submit" value="Submit">
   </form>
 
 <!-- Select languages Option 1 -->
@@ -63,16 +63,13 @@
    </div> 
    <form>
   <h5> How many words do you want to learn today?</h5>
-  <input type="number" value="Submit">
+  <!-- added input type of numbers, so browser doesn't let user type letters -->
+  <!-- added onchange handler, when onchange event happens, numberOfWordsChanged
+       function is called, and we get the number entered by the user -->
+  <input type="number" placeholder="Pick from 1-10 words to learn" 
+         onchange="numberOfWordsChanged(event)"/>
   </form>
-
-
-
-  
-
   </div>
-
-
 </div>
 
 
@@ -81,6 +78,6 @@
 
 </p>
 <!-- Javscript Style Sheet-->
-<script type="text/javascript" src="JS/script.js"></script>
+<script type="text/javascript" src="Assets/JS/script.js"></script>
 </body>
 </html>
