@@ -30,6 +30,7 @@
 <body>
   <header class="jumbotron">
     <h1 class="display-1">Language Barrier</h1>
+    <div id="modal"></div>
     <p id=jumboDay class="lead"></p>
     <p id="currentDay" class="lead"></p>
   </header>
@@ -46,13 +47,13 @@
   </form>
 
 <!-- Select languages Option 1 -->
-  <select class="w3-select" name="option" >
+  <select class="w3-select" name="option" id="select-bar" >
     <option value="" disabled selected>Which language do you want to learn today?</option>
-    <option value="1">English</option>
-    <option value="2">Spanish</option>
-    <option value="3">French</option>
+    <option value="Spanish">Spanish</option>
+    <option value="English">English</option>
+    <option value="French">French</option>
   </select> 
-<!-- Select Languages option 2-->
+<!-- Select Languages option 2
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-black">Select the languages</button>
     <div class="w3-dropdown-content w3-bar-block w3-border">
@@ -60,7 +61,7 @@
       <a href="#" class="w3-bar-item w3-button">Spanish</a>
       <a href="#" class="w3-bar-item w3-button">French</a>
     </div>
-   </div> 
+   </div> -->
    <form>
   <h5> How many words do you want to learn today?</h5>
   <!-- added input type of numbers, so browser doesn't let user type letters -->
