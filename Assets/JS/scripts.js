@@ -39,9 +39,13 @@ function checkFname(event) {
    } else {
        alert("Thank you!")
    }
+
 };
+
 function numberOfWordsChanged(event){
     console.log(event.srcElement.value);
 }
+
+
 
 
