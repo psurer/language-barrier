@@ -24,7 +24,7 @@ fetch(spanishApiKey)
 $("#select-bar").on("change", function(event){
     //Checking if the user selected a lenguage
     if(!$("#select-bar").val()){
-        $("#alert-div").text("Please select a language")
+        $("#modal").text("Please select a language")
         console.log(enterValue);
     }
     //Save the selected languages in a variable, that will we passed to the API link
