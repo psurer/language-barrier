@@ -14,8 +14,6 @@ fetch(spanishApiKey)
           }
         })
 
-
-
 //Listening the select tag, for the language
 $("#select-bar").on("change", function(event){
     //Checking if the user selected a lenguage
@@ -29,8 +27,6 @@ $("#select-bar").on("change", function(event){
       console.log(userLanguage)
     }
 })
-
-
 
 document.getElementById("fname-submit").addEventListener("click", checkFname)
 
