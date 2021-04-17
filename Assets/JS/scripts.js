@@ -56,9 +56,5 @@ function numberOfWordsChanged(event){
 }
 
 
-//new codegit 
 
 
-function test(event){
-  
-}
