@@ -3,6 +3,13 @@
 body{
   background-color:rgb(209, 38, 132); 
 }
+@media screen and (max-width: 1920px) {
+
+
+
+
+
+
 
 .jumbotron {
   text-align: center;
@@ -33,7 +40,7 @@ body{
 	justify-content:center;
   position: relative;
   top:80px;
-  left:600px;
+  left:575px;
 }
 
 .w3-button {
@@ -47,7 +54,7 @@ body{
  #headerID{
   width:100%;
 	height:100%;
-  display:flex;
+  display: flex;
 	font-family:'Titan One',cursive;
 	font-size:25px;
 	font-weight:500;
@@ -55,8 +62,8 @@ body{
 	justify-content:center;
   flex-flow:row wrap;
   position: relative;
-  left:10px; 
-  bottom:3px;
+  left:12px; 
+  bottom:-30px;
   color: rgb(132, 152, 218);
   }
 
@@ -87,15 +94,16 @@ body{
     justify-content:center;
     flex-flow:row wrap;
     position: relative;
-    right:160px;
+    right:142px;
     top:40px;
     color: black;
   }
 
-  #submitButton{
+  #fname-submit{
     position: relative;
-    top:100px;
-    right:365px;
+    top: 105px;
+    right:340px;
+    
     
   }
 
@@ -104,7 +112,7 @@ body{
     flex-flow:row wrap;
     position: relative;
     top:180px;
-    left:680px;
+    left:655px;
   }
 
   label {
@@ -128,10 +136,10 @@ body{
     flex-flow:row wrap;
     position: relative;
     top:150px;
-    left:560px;
+    left:537px;
   }
-  
- 
+}
+
 
   
  @media screen and (max-width:1024px){
@@ -317,7 +325,14 @@ body{
     color: rgb(132, 152, 218);
   }
 
-  @media screen and (max-width:375px){}
-  
-   
-  }
+  /*@media screen and (max-width:375px){}*/
+}
+
+/*Hidden & visiabiltiy classed*/
+.hidden{
+  visibility: hidden;
+};
+
+.show{
+  visibility: visible;
+}

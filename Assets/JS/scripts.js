@@ -56,6 +56,8 @@ function numberOfWordsChanged(event){
     console.log(event.srcElement.value);
 }
 
-
-
+//hidden words function
+function setDisplayQuestionSection(hidden) {
+  questionContainerElement.setAttribute('class', cssClassName);
+}
 
