@@ -80,10 +80,6 @@ $("#P_Page").show();
 }
 })
 
-
-
-
-
 //hidden words function
 function setDisplayQuestionSection(hidden) {
   questionContainerElement.setAttribute('class', cssClassName);

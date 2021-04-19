@@ -5,12 +5,6 @@ body{
 }
 @media screen and (max-width: 1920px) {
 
-
-
-
-
-
-
 .jumbotron {
   text-align: center;
   background-color: rgb(132, 152, 218);
@@ -325,14 +319,23 @@ body{
     color: rgb(132, 152, 218);
   }
 
-  /*@media screen and (max-width:375px){}*/
-}
-
-/*Hidden & visiabiltiy classed*/
-.hidden{
-  visibility: hidden;
-};
-
-.show{
-  visibility: visible;
-}
+  @media screen and (max-width:375px){}
+  
+   
+  }
+  /* added css for game page */
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    border: solid red 1px;
+  }
+  
+  .leftSideColumn {
+    flex: 1;
+  }
+  
+  .rightSideColumn {
+    flex: 1;
+  }
