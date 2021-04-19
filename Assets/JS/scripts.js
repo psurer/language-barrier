@@ -34,6 +34,7 @@ $("#select-bar").on("change", function(event){
     }
 })
 
+//login button
 document.getElementById("fname-submit").addEventListener("click", checkFname)
 
 
@@ -55,6 +56,8 @@ function numberOfWordsChanged(event){
     console.log(event.srcElement.value);
 }
 
-
-
+//hidden words function
+function setDisplayQuestionSection(hidden) {
+  questionContainerElement.setAttribute('class', cssClassName);
+}
 
