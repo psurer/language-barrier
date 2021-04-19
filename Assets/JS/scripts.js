@@ -47,6 +47,7 @@ $("#start").on("click", function(){
 //Checking if the user entered all the information
 //001-no language, no name, yes word qty
 if (!userLanguage && !userName && wordQty) {
+  console.log("testing")
   $("#modal").text("Please enter your name and choose the language!")
 }
 //010-no language, yes name, no word qty
