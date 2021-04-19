@@ -57,6 +57,75 @@ function numberOfWordsChanged(event){
     console.log(event.srcElement.value);
 }
 
+//game logic var
+var translatedWords = [];
+var words = ["apple", "strawberry", "bread", "tea", "fish"];
+var correctAnswers = new Map();
+var selectedSourceWord = ''; // Use to save the selected english word
+var selectedTargetWord = ''; // Use to save the target language word.
+
+//game logic
+function playGame() {
+  for (var index = 0; index < words.length; index++) {
+    displayWordsToUser(words[index], "#wordsToTranslate");
+    translate(words[index]);
+  }
+}
+//calls google API to translate a word
+function translate(word) {
+  var url =
+    "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
+  url += "&source=EN";
+  url += "&target=FR";
+  url += "&q=" + word;
+  //gets data from google
+  $.get(url, function (returnByGoogle, status) {
+    console.log(returnByGoogle.data.translations[0].translatedText);
+    translatedWords.push(returnByGoogle.data.translations[0].translatedText);
+    //add to correct answers list
+    correctAnswers.set(
+      word,
+      returnByGoogle.data.translations[0].translatedText
+    );
+    displayWordsToUser(
+      returnByGoogle.data.translations[0].translatedText,
+      "#translatedWordsList"
+    );
+  });
+}
+//displays words to user
+function displayWordsToUser(word, elementID) {
+  if ('#translatedWordsList' === elementID) {
+    $(elementID).append(
+      `<li><input type="checkbox" disabled onclick="whenTargetWordIsClicked('${word}')"/>${word}</li>`
+    );
+  } else {
+    $(elementID).append(
+      `<li><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/>${word}</li>`
+    );
+  }
+}
+
+function whenSourceWordIsClicked(word) {
+  selectedSourceWord = word;
+  //enable target words list
+  $('#translatedWordsList').children('li').children('input').prop('disabled', false);
+}
+
+function whenTargetWordIsClicked(word) {
+  selectedTargetWord = word;
+  //now check the result
+  checkSelection();
+}
+
+function checkSelection(){
+  if ( correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
+    alert("YOU ARE CORRECT!!!");
+  } else {
+    alert('NOPE!!!');
+  }
+}
+playGame();
 
 
 
