@@ -1,9 +1,16 @@
 var userLanguage;
 
-
-
-
 var spanishApiKey="https://dictionaryapi.com/api/v3/references/spanish/json/test?key=b5ae1ad4-6953-4b14-a6e0-f473b7f23015"
+//key, source, target, k , are parameters, you seperate by & 
+//example key=a877hjhj&target=FR& and so on
+//transation. is substituting wwww. it is called a sub domain , this is how sports.cnn.com/ would be generated
+https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc&source=EN&target=FR&q=hello
+
+$("#btnTranslate").click(function (){
+  var url = "https://translation.googleapis.com/language/translate/vs?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc"
+
+  url += "&source"
+})
 
 fetch(spanishApiKey)
     .then(function (response) {
@@ -17,8 +24,6 @@ fetch(spanishApiKey)
             console.log("it doesn't")
           }
         })
-
-
 
 //Listening the select tag, for the language
 $("#select-bar").on("change", function(event){
@@ -35,9 +40,6 @@ $("#select-bar").on("change", function(event){
 })
 
 document.getElementById("fname-submit").addEventListener("click", checkFname)
-
-
-
 
 function checkFname(event) {
     var input = document.getElementById("fname")
