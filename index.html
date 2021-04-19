@@ -34,8 +34,8 @@
     <p id="currentDay" class="lead"></p>
   </header>
 
-
-<div id="Login Page" class="w3-container">
+<main>
+<section id="Login Page" class="w3-container">
   <!-- Header -->
   <header id="headerID"> Language Barrier Login </header>
   <!-- Name input -->
@@ -66,18 +66,16 @@
   <!-- added input type of numbers, so browser doesn't let user type letters -->
   <!-- added onchange handler, when onchange event happens, numberOfWordsChanged
        function is called, and we get the number entered by the user -->
-  <input id= "languageInput" type="number" placeholder="Pick from 1-10 words to learn" 
-         onchange="numberOfWordsChanged(event)"/>
+  <input id= "languageInput" type="number" placeholder="Pick from 1-10 words to learn" onchange="numberOfWordsChanged(event)"/>
   </form>
-  </div>
-</div>
+</section>
 
 
   
 </div>
 
 <!-- Process Page-->
-<div id="P_Page">
+<section id="P_Page">
   <div id="Top_half">
     <!-- Header-->
     <h1>Language Barrier</h1>
@@ -103,9 +101,9 @@
   
   </div>
 
-</div>
+</section>
   <!-- Congratulations Page-->
-  <div id="Congratulations">
+  <section id="Congratulations">
 
     <header> Congratulations!</header>
 
@@ -117,9 +115,8 @@
     <button id="" onclick="location.href=''" type="button"> Log for the day </button>
     
 
-  </div>
-
-</p>
+  </section>
+</main>
 <!-- Javscript Style Sheet-->
 <script type="text/javascript" src="Assets/JS/scripts.js"></script>
 </body>
