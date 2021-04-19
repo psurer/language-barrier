@@ -25,6 +25,7 @@ $("#select-bar").on("change", function(event){
       console.log(userLanguage)
 })
 
+//login button
 document.getElementById("fname-submit").addEventListener("click", checkFname)
 function checkFname(event) {
     var input = document.getElementById("fname")
@@ -83,4 +84,8 @@ $("#P_Page").show();
 
 
 
+//hidden words function
+function setDisplayQuestionSection(hidden) {
+  questionContainerElement.setAttribute('class', cssClassName);
+}
 
