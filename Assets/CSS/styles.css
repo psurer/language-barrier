@@ -4,6 +4,13 @@
 body{
   background-color:rgb(209, 38, 132); 
 }
+@media screen and (max-width: 1920px) {
+
+
+
+
+
+
 
 .jumbotron {
   text-align: center;
@@ -26,7 +33,7 @@ body{
   font-family:'Titan One',cursive;
   position: relative;
   top:80px;
-  left:600px;
+  left:575px;
 }
 
 .w3-button {
@@ -39,11 +46,21 @@ body{
  #headerID{
   width:100%;
 	height:100%;
+<<<<<<< HEAD
   font-family:'Titan One',cursive;
+=======
+  display: flex;
+	font-family:'Titan One',cursive;
+>>>>>>> main
 	font-size:25px;
   position: relative;
+<<<<<<< HEAD
   left:645px; 
   bottom:3px;
+=======
+  left:12px; 
+  bottom:-30px;
+>>>>>>> main
   color: rgb(132, 152, 218);
   }
 
@@ -66,15 +83,25 @@ body{
     font-family:'Titan One',cursive;
     font-size:20px;
     position: relative;
+<<<<<<< HEAD
     right:300px;
+=======
+    right:142px;
+>>>>>>> main
     top:40px;
     color: black;
   }
 
   #fname-submit{
     position: relative;
+<<<<<<< HEAD
     top:100px;
     right:200px;
+=======
+    top: 105px;
+    right:340px;
+    
+>>>>>>> main
     
   }
 
@@ -83,7 +110,11 @@ body{
     font-family:'Titan One',cursive;
     position: relative;
     top:180px;
+<<<<<<< HEAD
     left:660px;
+=======
+    left:655px;
+>>>>>>> main
   }
 
   label {
@@ -102,10 +133,15 @@ body{
     font-family:'Titan One',cursive;
     position: relative;
     top:150px;
-    left:560px;
+    left:537px;
   }
+<<<<<<< HEAD
 
  
+=======
+}
+
+>>>>>>> main
 
   
  @media screen and (max-width:1024px){
@@ -380,7 +416,14 @@ body{
     color: rgb(132, 152, 218);
   }
 
-  @media screen and (max-width:375px){}
-  
-   
-  }
+  /*@media screen and (max-width:375px){}*/
+}
+
+/*Hidden & visiabiltiy classed*/
+.hidden{
+  visibility: hidden;
+};
+
+.show{
+  visibility: visible;
+}
