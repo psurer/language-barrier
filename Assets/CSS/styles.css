@@ -5,12 +5,15 @@ body{
   background-color:rgb(209, 38, 132); 
 }
 @media screen and (max-width: 1920px) {
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
 
 .jumbotron {
   text-align: center;
@@ -47,13 +50,17 @@ body{
   width:100%;
 	height:100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family:'Titan One',cursive;
 =======
+=======
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
   display: flex;
 	font-family:'Titan One',cursive;
 >>>>>>> main
 	font-size:25px;
   position: relative;
+<<<<<<< HEAD
 <<<<<<< HEAD
   left:645px; 
   bottom:3px;
@@ -61,6 +68,10 @@ body{
   left:12px; 
   bottom:-30px;
 >>>>>>> main
+=======
+  left:12px; 
+  bottom:-30px;
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
   color: rgb(132, 152, 218);
   }
 
@@ -84,16 +95,21 @@ body{
     font-size:20px;
     position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
     right:300px;
 =======
     right:142px;
 >>>>>>> main
+=======
+    right:142px;
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
     top:40px;
     color: black;
   }
 
   #fname-submit{
     position: relative;
+<<<<<<< HEAD
 <<<<<<< HEAD
     top:100px;
     right:200px;
@@ -102,6 +118,11 @@ body{
     right:340px;
     
 >>>>>>> main
+=======
+    top: 105px;
+    right:340px;
+    
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
     
   }
 
@@ -111,10 +132,14 @@ body{
     position: relative;
     top:180px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     left:660px;
 =======
     left:655px;
 >>>>>>> main
+=======
+    left:655px;
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
   }
 
   label {
@@ -136,12 +161,17 @@ body{
     left:537px;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  
 =======
 }
 
 >>>>>>> main
+=======
+}
+
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
 
   
  @media screen and (max-width:1024px){
@@ -416,6 +446,7 @@ body{
     color: rgb(132, 152, 218);
   }
 
+<<<<<<< HEAD
   /*@media screen and (max-width:375px){}*/
 }
 
@@ -427,3 +458,25 @@ body{
 .show{
   visibility: visible;
 }
+=======
+  @media screen and (max-width:375px){}
+  
+   
+  }
+  /* added css for game page */
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    border: solid red 1px;
+  }
+  
+  .leftSideColumn {
+    flex: 1;
+  }
+  
+  .rightSideColumn {
+    flex: 1;
+  }
+>>>>>>> 3d7e2ec4da2d04c9e665a19e342a5eea51f6f6f2
