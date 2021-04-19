@@ -28,6 +28,7 @@
 </head>
 
 <body>
+
   <header class="jumbotron">
     <h1 class="display-1">Language Barrier</h1>
     <div id="modal"></div>
@@ -36,7 +37,7 @@
   </header>
 
 
-<div id="Login Page" class="w3-container">
+<div id="loginPage" class="w3-container">
   <!-- Header -->
   <header id="headerID"> Language Barrier Login </header>
   <!-- Name input -->
@@ -60,9 +61,9 @@
       <a href="#" class="w3-bar-item w3-button">English</a>
       <a href="#" class="w3-bar-item w3-button">Spanish</a>
       <a href="#" class="w3-bar-item w3-button">French</a>
-    </div>
-   </div> -->
-   <form>
+    </div>-->
+   </div> 
+   <form id="wordQty">
   <h5> How many words do you want to learn today?</h5>
   <!-- added input type of numbers, so browser doesn't let user type letters -->
   <!-- added onchange handler, when onchange event happens, numberOfWordsChanged
@@ -73,12 +74,14 @@
   </div>
 </div>
 
+<!-- adding start btn-->
+<button id="start">Start</button>
 
-  
+
 </div>
 
 <!-- Process Page-->
-<div id="P_Page">
+<div id="P_Page" class="hidden">
   <div id="Top_half">
     <!-- Header-->
     <h1>Language Barrier</h1>
@@ -89,12 +92,14 @@
     <!-- Page Split-->
     <h5 style="border: 1px solid blue; background-color: antiquewhite;">English Word</h5>
   </div>
+
   <!-- Image container -->
   <!-- Used some CSS to get a visual for myself. Nick you can delete it and work on the CSS -->
   <div id="Bottom half" style="height:200px; width:200px; background-color: red;">
     <!--Image -->
     <img src="" alt="Word_Img" >
   </div>
+
   <!-- Output for Translation Options-->
   <div id="translation">
     <!-- Button for Translation-->
@@ -105,19 +110,16 @@
   </div>
 
 </div>
+
   <!-- Congratulations Page-->
   <div id="Congratulations">
-
     <header> Congratulations!</header>
-
     <p id="output_text"></p>
     <!-- Button Keep learning href is empty and ID is empty -->
     <button id="" onclick="location.href='" type="button"> Keep learning? </button>
     <!-- Button for the the day -->
     <!--  href is empty and ID is empty -->
     <button id="" onclick="location.href='" type="button"> Log for the day </button>
-    
-
   </div>
 
 </p>
