@@ -43,40 +43,31 @@ function numberOfWordsChanged(event){
     console.log(wordQty);
 }
 
-//Listening start btn
+//Listening start btn 
 $("#start").on("click", function(){
+  var userLanguage=$("#select-bar").val()
+  var userName=$("#fname").val()
+  var wordQty=$("#languageInput").val()
 //Checking if the user entered all the information
 //001-no language, no name, yes word qty
-if (!userLanguage && !userName && wordQty) {
-  console.log("testing")
-  $("#modal").text("Please enter your name and choose the language!")
+if (!userLanguage) {
+  $("#modalText").text("Please select the language")
+  $('#myModal').modal("show")
+  return;
 }
 //010-no language, yes name, no word qty
-else if (!userLanguage && userName && !wordQty) {
-  $("#modal").text("Please choose the language and enter how many words you want to learn today!")
+else if (!wordQty) {
+  $("#modalText").text("Please enter how many words you want to learn today!")
+  $('#myModal').modal("show")
 }
 //011-no language, yes name, yes word qty
-else if (!userLanguage && userName && wordQty) {
-  $("#modal").text("Please choose the language!")
-}
-//100-yes language, no name, no word qty
-else if(userLanguage && !userName && !wordQty){
-  $("#modal").text("Please enter your name and how many words you want to learn today!")
-}
-//101-yes language, no name, yes word qty
-else if (userLanguage && !userName && wordQty) {
-  $("#modal").text("Please enter your name!")
-}
-//110-yes language, yes name, no word qty
-else if (userLanguage && userName && !wordQty){
-  $("#modal").text("Please enter how many words you want to learn today!")
+else if (!userName) {
+  $("#modalText").text("Please enter your name!")
+  $('#myModal').modal("show")
 }
 else {
-  $("#modal").text("Great!Let's play!")
   //Display the Process page and hide previous information
-$("#loginPage").hide();
-$("#wordQty").hide();
-$("#P_Page").show();
+document.location.replace("")
 }
 })
 
