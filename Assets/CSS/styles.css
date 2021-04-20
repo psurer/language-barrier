@@ -3,14 +3,17 @@
 body{
   background-color:rgb(209, 38, 132); 
 }
-@media screen and (max-width: 1920px) {
-
+  /* only touch specific things, positions, width, height, flex direction, 
+  NOT bg color, font family, etc */
 .jumbotron {
   text-align: center;
   background-color: rgb(132, 152, 218);
   color: rgb(209, 38, 132);
   padding-bottom: 0px;
 }
+
+@media screen and (max-width: 1920px) {
+
 
 .display-1 {
 
@@ -137,14 +140,6 @@ body{
 
   
  @media screen and (max-width:1024px){
-  
-  .jumbotron {
-   width: 100%;
-   text-align: center;
-   background-color: rgb(132, 152, 218);
-   color: rgb(209, 38, 132);
-    
-  }
 
   .display-1 {
   
