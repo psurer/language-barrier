@@ -23,60 +23,61 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- CSS stylesheet for Modal-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  
  
 </head>
 
 <body>
-
+<!-- Language Barrier Header-->
   <header class="jumbotron">
     <h1 class="display-1">Language Barrier</h1>
     <div id="modal"></div>
     <p id=jumboDay class="lead"></p>
     <p id="currentDay" class="lead"></p>
   </header>
+<!-- Start Button-->
+  <div class="w3-bottom w3-center">
+    <div class="w3-bar">
+   <!-- Modal Button Start ***CHANGE ID** "id01 is found in lines 43,46"-->
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
+    </div>
+  </div>
 
+    <!-- Start of Modal Code-->
+    <div id="id01" class="w3-modal  ">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-deep-purple" style="max-width:600px">
+  <!-- Login Button-->
+        <div class="w3-center "><br>
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        </div>
+  <!-- Code for Login Card-->
+        <form class="w3-container w3-deep-purple" >
+          <div class="w3-section ">
+    <!-- First Name-->
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter First Name" name="FName" required>
+    <!-- Last Name-->
+            <input class="w3-input w3-border" type="text" placeholder="Enter Last Name" name="LName" required> <br>
+        <!-- Menu Select for language-->
+            <select class="w3-select w3-block w3-border w3-margin-bottom" name="option" id="" required>
+              <option value="" disabled selected>Pick your language</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          <!-- Words to learn for today input-->
+            <input class="w3-input " type="number" min="1" max="10" placeholder="How many words do you want to learn today?" required></button>
+            <!-- Start Button-->
+            <button class="w3-button w3-block w3-green w3-section w3-padding " 
+            type="submit">Start</button>
+          </div>
+        </form>
+      
+      </div>
+  </div> 
 
-<div id="loginPage" class="w3-container">
-  <!-- Header -->
-  <header id="headerID"> Language Barrier Login </header>
-  <!-- Name input -->
-  <form id="Login_Info">
-    <label for="fname">Full name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <input type="button" id="fname-submit" value="Submit">
-  </form>
-
-<!-- Select languages Option 1 -->
-  <select class="w3-select" name="option" id="select-bar">
-    <option value="" disabled selected>Which language do you want to learn today?</option>
-    <option value="Portuguese">Portuguese</option>
-    <option value="Spanish">Spanish</option>
-    <option value="French">French</option>
-  </select> 
-<!-- Select Languages option 2
-  <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Select the languages</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border">
-      <a href="#" class="w3-bar-item w3-button">English</a>
-      <a href="#" class="w3-bar-item w3-button">Spanish</a>
-      <a href="#" class="w3-bar-item w3-button">French</a>
-    </div>-->
-   </div> 
-   <form id="wordQty">
-  <h5> How many words do you want to learn today?</h5>
-  <!-- added input type of numbers, so browser doesn't let user type letters -->
-  <!-- added onchange handler, when onchange event happens, numberOfWordsChanged
-       function is called, and we get the number entered by the user -->
-  <input id= "languageInput" type="number" placeholder="Pick from 1-10 words to learn" onchange="numberOfWordsChanged(event)"/>
-  </form>
-</section>
-
-<!-- adding start btn-->
-<button id="start">Start</button>
-
-
-</div>
 
 <!-- Process Page-->
 <div id="P_Page" class="hidden">

@@ -3,7 +3,6 @@
 body{
   background-color:rgb(209, 38, 132); 
 }
-@media screen and (max-width: 1920px) {
 
 
 
@@ -28,7 +27,7 @@ body{
   position: relative;
   bottom:40px;
    }
-
+/* 
 .w3-select {
   font-family:'Titan One',cursive;
   flex-flow:row wrap;
@@ -36,21 +35,21 @@ body{
 	justify-content:center;
   position: relative;
   top:80px;
-  left:575px;
-}
+  left:600px;
+} */
 
-.w3-button {
+/* .w3-button {
   font-family:'Titan One',cursive;
   flex-flow:row wrap;
   position: relative;
   top:130px;
   left:710px;
-}
+} */
 
  #headerID{
   width:100%;
 	height:100%;
-  display: flex;
+  display:flex;
 	font-family:'Titan One',cursive;
 	font-size:25px;
 	font-weight:500;
@@ -58,8 +57,8 @@ body{
 	justify-content:center;
   flex-flow:row wrap;
   position: relative;
-  left:12px; 
-  bottom:-30px;
+  left:10px; 
+  bottom:3px;
   color: rgb(132, 152, 218);
   }
 
@@ -90,25 +89,24 @@ body{
     justify-content:center;
     flex-flow:row wrap;
     position: relative;
-    right:142px;
+    right:160px;
     top:40px;
     color: black;
   }
-
-  #fname-submit{
+/* 
+  #submitButton{
     position: relative;
-    top: 105px;
-    right:340px;
+    top:100px;
+    right:365px;
     
-    
-  }
+  } */
 
   #languageInput{
     font-family:'Titan One',cursive;
     flex-flow:row wrap;
     position: relative;
     top:180px;
-    left:655px;
+    left:680px;
   }
 
   label {
@@ -127,15 +125,15 @@ body{
     color: rgb(132, 152, 218);
   }
 
-  h5 {
+  /* h5 {
     font-family:'Titan One',cursive;
     flex-flow:row wrap;
     position: relative;
     top:150px;
-    left:537px;
+    left:560px;
   }
-}
-
+   */
+ 
 
   
  @media screen and (max-width:1024px){
@@ -203,14 +201,14 @@ body{
    color: black;
      }
     
-  #submitButton{
+  /* #submitButton{
    width: 55%;
    height:20%;
    position: absolute;
    font-size: 15px;
    top:250px;
    left:210px;
-        
+         */
      }
     
   label {
@@ -297,7 +295,7 @@ body{
     color: black;
   }
 
-  #submitButton{
+  /* #submitButton{
     width: 100%;
     height:20%;
     position: absolute;
@@ -305,7 +303,7 @@ body{
     top:190px;
     left:108px;
     
-  }
+  } */
 
   label {
     width:100%;
@@ -324,20 +322,4 @@ body{
   @media screen and (max-width:375px){}
   
    
-  }
-  /* added css for game page */
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    border: solid red 1px;
-  }
-  
-  .leftSideColumn {
-    flex: 1;
-  }
-  
-  .rightSideColumn {
-    flex: 1;
   }
