@@ -23,6 +23,10 @@ $("#select-bar").on("change", function(event){
     //Save the selected languages in a variable, that will we passed to the API link
       userLanguage=$("#select-bar").val()
       console.log(userLanguage)
+    //Saving the value into the local storage
+    localStorage.setItem("language", JSON.stringify(userLanguage));
+    console.log(localStorage.getItem("language"))
+
 })
 
 //login button
@@ -31,16 +35,18 @@ function checkFname(event) {
     var input = document.getElementById("fname")
     var userName = input.value
     console.log(userName);
-  //if(userName === ""){
-  //   alert("Please write a name!"); 
-  // } else {
-  //    alert("Thank you!")
+     //Saving the value into the local storage
+     localStorage.setItem("name", JSON.stringify(userName));
+     console.log(localStorage.getItem("name"))
    }
 
 function numberOfWordsChanged(event){
     console.log(event.srcElement.value);
     var wordQty = event.srcElement.value
     console.log(wordQty);
+    //Saving the value into the local storage
+    localStorage.setItem("words", JSON.stringify(wordQty));
+    console.log(localStorage.getItem("words"))
 }
 
 //Listening start btn 
@@ -67,7 +73,7 @@ else if (!userName) {
 }
 else {
   //Display the Process page and hide previous information
-document.location.replace("")
+document.location.replace("game_page.html")
 }
 })
 
