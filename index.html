@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,6 +23,9 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
  
  
 </head>
@@ -31,7 +34,32 @@
 
   <header class="jumbotron">
     <h1 class="display-1">Language Barrier</h1>
-    <div id="modal"></div>
+    <!--Modal-->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+
+        </button>
+        <h4 class="modal-title">Missing Info!</h4>
+
+      </div>
+      <div class="modal-body">
+        <p id="modalText"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!--End Modal-->
+
     <p id=jumboDay class="lead"></p>
     <p id="currentDay" class="lead"></p>
   </header>
@@ -50,9 +78,9 @@
 <!-- Select languages Option 1 -->
   <select class="w3-select" name="option" id="select-bar">
     <option value="" disabled selected>Which language do you want to learn today?</option>
-    <option value="Portuguese">Portuguese</option>
-    <option value="Spanish">Spanish</option>
-    <option value="French">French</option>
+    <option value=PG>Portuguese</option>
+    <option value=SP>Spanish</option>
+    <option value=FR>French</option>
   </select> 
 <!-- Select Languages option 2
   <div class="w3-dropdown-hover">
@@ -63,6 +91,7 @@
       <a href="#" class="w3-bar-item w3-button">French</a>
     </div>-->
    </div> 
+
    <form id="wordQty">
   <h5> How many words do you want to learn today?</h5>
   <!-- added input type of numbers, so browser doesn't let user type letters -->
@@ -72,16 +101,12 @@
          onchange="numberOfWordsChanged(event)"/>
   </form>
   </div>
-</div>
-
 <!-- adding start btn-->
 <button id="start">Start</button>
 
 
-</div>
-
 <!-- Process Page-->
-<div id="P_Page" class="hidden">
+<div id="P_Page">
   <div id="Top_half">
     <!-- Header-->
     <h1>Language Barrier</h1>
@@ -106,9 +131,7 @@
     <button type="button">Translation 1</button>
     <button type="button">Translation 2</button>
     <button type="button">Translation 2</button>
-  
   </div>
-
 </div>
 
   <!-- Congratulations Page-->
@@ -125,5 +148,6 @@
 </p>
 <!-- Javscript Style Sheet-->
 <script type="text/javascript" src="Assets/JS/scripts.js"></script>
+
 </body>
 </html>
