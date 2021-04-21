@@ -4,6 +4,12 @@ var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will 
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
+var savedNamed=localStorage.getItem("name")
+console.log(savedNamed);
+var savedWordsQty=localStorage.getItem("words")
+console.log(savedWordsQty)
+var savedLanguage=localStorage.getItem("language")
+console.log(savedLanguage)
 
 //game logic 
 
