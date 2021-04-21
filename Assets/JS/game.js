@@ -71,8 +71,21 @@ function checkSelection(){
     alert("YOU ARE CORRECT!!!");
   } else {
     alert('NOPE!!!');
+    clearUserSelectionsCheckBox();
   }
 }
+// logic to clear check box on translated words section
+function clearUserSelectionsCheckBox() {
+  //Here you need to find the element with the id
+  //Then you need to find a way to find all the elements "children" that are LI
+  //once you get that you need to set a property named "checked" to false
+  //You do all that in one line of code using JQuery. 
+  //If you look at your code you will see an example of doing that to 
+  //another element but basically the same concept. Looking for an element,
+  //finding children and setting a property
+    $('#translatedWordsList').children('li').children('input').prop('checked', false);
+}
+
 playGame();
 
 

@@ -1,25 +1,16 @@
 /*CSS for the login page, includes different screen sizes*/
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
-/* Wild caerd styling */
-* {
-    font-family:'Titan One',cursive;
-    font-size:12px;
-    font-weight:700;
-  }
-
 body{
   background-color:rgb(209, 38, 132); 
 }
- 
+@media screen and (max-width: 1920px) {
+
 .jumbotron {
   text-align: center;
   background-color: rgb(132, 152, 218);
   color: rgb(209, 38, 132);
   padding-bottom: 0px;
 }
-
-@media screen and (max-width: 1920px) {
-
 
 .display-1 {
 
@@ -141,6 +132,19 @@ body{
     top:150px;
     left:537px;
   }
+}
+
+
+  
+ @media screen and (max-width:1024px){
+  
+  .jumbotron {
+   width: 100%;
+   text-align: center;
+   background-color: rgb(132, 152, 218);
+   color: rgb(209, 38, 132);
+    
+  }
 
   .display-1 {
   
@@ -223,6 +227,11 @@ body{
       
    }
 
+ /*@media screen and (max-width:768px){}*/
+  
+ @media screen and (max-width:414px){
+     
+  
 .jumbotron {
   width:100%;
   text-align: center;
@@ -309,19 +318,24 @@ body{
     left:110px;
     color: rgb(132, 152, 218);
   }
-  /* default */
-  @media screen and (max-width: 1912px){
 
+  @media screen and (max-width:375px){}
+  
+   
   }
-
-  @media screen and (max-width: 1024px) {
-
+  /* added css for game page */
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    border: solid red 1px;
   }
-
-  @media screen and (max-width:768px){
-
+  
+  .leftSideColumn {
+    flex: 1;
   }
-
-  @media screen and (max-width:414px){
-
+  
+  .rightSideColumn {
+    flex: 1;
   }
