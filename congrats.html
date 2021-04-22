@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>Congrats Page</title> -->
     <link rel="stylesheet" href="Assets/CSS/congrats.css">
     
 </head>
 <body>
-    <div id="Congratulations">
-        <header id="congratsTitle"> Congratulations!</header>
+    <div class="mainContainer">
+        <header id="Congratulations"> Congratulations!</header>
         <p id="output_text"></p>
         <!-- Button Keep learning href is empty and ID is empty -->
-        <button id="learningButton" onclick="location.href='" type="button"> Keep learning? <a href="./game_page.html">Finish</a></button>
+        <button onclick="goTo()" type="button"> Keep learning? </button>
         <!-- Button for the the day -->
         <!--  href is empty and ID is empty -->
-        <button id="logButton" onclick="location.href='" type="button"> Log for the day </button>
-      </div>
-      
-    </p>
+    </div>
+    <div id="wins"></div>
+    <div id="losses"></div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="Assets/JS/congrats_page.js"></script>
 </body>
 </html>

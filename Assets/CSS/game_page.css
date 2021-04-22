@@ -1,0 +1,71 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}
+  
+.leftSideColumn {
+  flex: 1;
+  margin-left: 5px;
+}
+  
+.rightSideColumn {
+  flex: 1;
+}
+
+.scratched {
+  text-decoration: line-through;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+body{
+  background-color:rgb(209, 38, 132); 
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.mainAppBanner {
+  text-align: center;
+  border: white solid 2px;
+  font-family:'Titan One',cursive;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  border: solid red 1px;
+}
+  
+.leftSideColumn {
+  flex: 1;
+}
+  
+.rightSideColumn {
+  flex: 1;
+}
+
+  /* @media screen and (max-width: 1912px){
+
+  }
+
+  @media screen and (max-width: 1024px) {
+
+  }
+
+  @media screen and (max-width:768px){
+
+  }
+
+  @media screen and (max-width:414px){
+
+  } 

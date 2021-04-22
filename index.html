@@ -19,12 +19,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Assets/CSS/styles.css" />
+<<<<<<< HEAD
     
 
     
+=======
+>>>>>>> 45962beaa89c92790f24222b73531d4083fe3697
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
     <!-- CSS stylesheet for Modal-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  
@@ -32,123 +34,64 @@
 </head>
 
 <body>
+
 <!-- Language Barrier Header-->
   <header class="jumbotron">
     <h1 class="display-1">Language Barrier</h1>
-    <!--Modal-->
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-
-        </button>
-        <h4 class="modal-title">Missing Info!</h4>
-
-      </div>
-      <div class="modal-body">
-        <p id="modalText"></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
-
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-<!--End Modal-->
-
     <p id=jumboDay class="lead"></p>
     <p id="currentDay" class="lead"></p>
   </header>
-<!-- Start Button-->
+
+  <!-- Start Button-->
   <div class="w3-bottom w3-center">
     <div class="w3-bar">
    <!-- Modal Button Start ***CHANGE ID** "id01 is found in lines 43,46"-->
+<<<<<<< HEAD
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
     
     </div>
+=======
+   <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
+>>>>>>> 45962beaa89c92790f24222b73531d4083fe3697
   </div>
+</div>
+
 
     <!-- Start of Modal Code-->
-    <div id="id01" class="w3-modal  ">
+    <div id="id01" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-deep-purple" style="max-width:600px">
-  <!-- Login Button-->
+  <!-- Login Button
         <div class="w3-center "><br>
           <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-        </div>
+        </div>-->
   <!-- Code for Login Card-->
-        <form class="w3-container w3-deep-purple" >
+        <div class="w3-container w3-deep-purple" >
           <div class="w3-section ">
     <!-- First Name-->
-            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter First Name" name="FName" required>
+            <input  class="w3-input w3-border w3-margin-bottom " type="text" placeholder="Enter First Name" name="FName" id="fname" required>
     <!-- Last Name-->
-            <input class="w3-input w3-border" type="text" placeholder="Enter Last Name" name="LName" required> <br>
+            <input class="w3-input w3-border" type="text" placeholder="Enter Last Name" name="LName" required id="lastName"> <br>
         <!-- Menu Select for language-->
-            <select class="w3-select w3-block w3-border w3-margin-bottom" name="option" id="" required>
+            <select class="w3-select w3-block w3-border w3-margin-bottom" name="option" id="select-bar" required>
               <option value="" disabled selected>Pick your language</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
+              <option value=SP>Spanish</option>
+              <option value=FR>French</option>
+              <option value=PT>Portuguese</option>
             </select>
           <!-- Words to learn for today input-->
-            <input class="w3-input " type="number" min="1" max="10" placeholder="How many words do you want to learn today?" required></button>
+            <input id="words" class="w3-input " type="number" min="1" max="10" placeholder="How many words do you want to learn today?" required></button>
             <!-- Start Button-->
-            <button class="w3-button w3-block w3-green w3-section w3-padding " 
-            type="submit">Start</button>
+          
+            <button class="w3-button w3-block w3-green w3-section w3-padding" 
+            type="submit" id="startGame">Start</button>
+          
           </div>
-        </form>
+        </div>
       
       </div>
   </div> 
 
-
-<!-- Process Page-->
-<div id="P_Page">
-  <div id="Top_half">
-    <!-- Header-->
-    <h1>Language Barrier</h1>
-    <!-- Button-->
-      <form id=button> 
-        <input type="submit" value="Next Word"></input>
-    </form> <br>
-    <!-- Page Split-->
-    <h5 style="border: 1px solid blue; background-color: antiquewhite;">English Word</h5>
-  </div>
-
-  <!-- Image container -->
-  <!-- Used some CSS to get a visual for myself. Nick you can delete it and work on the CSS -->
-  <div id="Bottom half" style="height:200px; width:200px; background-color: red;">
-    <!--Image -->
-    <img src="" alt="Word_Img" >
-  </div>
-
-  <!-- Output for Translation Options-->
-  <div id="translation">
-    <!-- Button for Translation-->
-    <button type="button">Translation 1</button>
-    <button type="button">Translation 2</button>
-    <button type="button">Translation 2</button>
-  </div>
-
-</section>
-  <!-- Congratulations Page-->
-  <section id="Congratulations">
-
-    <header> Congratulations!</header>
-    <p id="output_text"></p>
-    <!-- Button Keep learning href is empty and ID is empty -->
-    <button id="" onclick="location.href=''" type="button"> Keep learning? </button>
-    <!-- Button for the the day -->
-    <!--  href is empty and ID is empty -->
-    <button id="" onclick="location.href=''" type="button"> Log for the day </button>
-    
-  </section>
-</main>
-<!-- Javscript Style Sheet-->
+<!-- Javascript Style Sheet-->
 <script type="text/javascript" src="Assets/JS/scripts.js"></script>
 
 </body>
