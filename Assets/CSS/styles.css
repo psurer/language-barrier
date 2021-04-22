@@ -1,22 +1,325 @@
 /*CSS for the login page, includes different screen sizes*/
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
+body{
+  background-color:rgb(209, 38, 132); 
+}
+
+
+
+.jumbotron {
+  text-align: center;
+  background-color: rgb(132, 152, 218);
+  color: rgb(209, 38, 132);
+  padding-bottom: 0px;
+}
+
+.display-1 {
+
+	width:100%;
+	height:100%;
+  font-family:'Titan One',cursive;
+	font-size:60px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center;
+  flex-flow:row wrap;
+  position: relative;
+  bottom:40px;
+   }
+/* 
+.w3-select {
+  font-family:'Titan One',cursive;
+  flex-flow:row wrap;
+	align-content:center;
+	justify-content:center;
+  position: relative;
+  top:80px;
+  left:600px;
+} */
+
+/* .w3-button {
+  font-family:'Titan One',cursive;
+  flex-flow:row wrap;
+  position: relative;
+  top:130px;
+  left:710px;
+} */
+
+ #headerID{
+  width:100%;
+	height:100%;
+  display:flex;
+	font-family:'Titan One',cursive;
+	font-size:25px;
+	font-weight:500;
+	align-content:center;
+	justify-content:center;
+  flex-flow:row wrap;
+  position: relative;
+  left:10px; 
+  bottom:3px;
+  color: rgb(132, 152, 218);
+  }
+
+  #Login_Info{
+    width:100%;
+    height:100%;
+    padding:50px;
+    display:flex;
+    font-family:'Titan One',cursive;
+    font-size:25px;
+    font-weight:500;
+    align-content:center;
+    justify-content:center;
+    flex-flow:row wrap;
+    position: relative;
+    bottom:10px;
+    color: rgb(132, 152, 218);
+  }
+
+  #fname{
+    width:20%;
+    height:30%;
+    padding:5px;
+    font-family:'Titan One',cursive;
+    font-size:20px;
+    font-weight:500;
+    align-content:center;
+    justify-content:center;
+    flex-flow:row wrap;
+    position: relative;
+    right:160px;
+    top:40px;
+    color: black;
+  }
+/* 
+  #submitButton{
+    position: relative;
+    top:100px;
+    right:365px;
+    
+  } */
+
+  #languageInput{
+    font-family:'Titan One',cursive;
+    flex-flow:row wrap;
+    position: relative;
+    top:180px;
+    left:680px;
+  }
+
+  label {
+    width:30%;
+    height:30%;
+    display:flex;
+    font-family:'Titan One',cursive;
+    font-size:25px;
+    font-weight:500;
+    flex-flow:row wrap;
+    align-content:center;
+    justify-content:center;
+    position: relative;
+    bottom:10px;
+    left:220px;
+    color: rgb(132, 152, 218);
+  }
+
+  /* h5 {
+    font-family:'Titan One',cursive;
+    flex-flow:row wrap;
+    position: relative;
+    top:150px;
+    left:560px;
+  }
+   */
+ 
 
   
+ @media screen and (max-width:1024px){
+  
+  .jumbotron {
+   width: 100%;
+   text-align: center;
+   background-color: rgb(132, 152, 218);
+   color: rgb(209, 38, 132);
+    
+  }
+
+  .display-1 {
+  
+   width:100%;
+   height:100%;
+   font-family:'Titan One',cursive;
+   font-size:60px;
+   font-weight:700;
+   align-content:center;
+   justify-content:center;
+   position: relative;
+   bottom:35px;
+     }
+
+  #headerID{
+   width: 70%;
+   height:30%;
+   font-family:'Titan One',cursive;
+   font-size:40px;
+   font-weight:500;
+   align-content:center;
+   justify-content:center;
+   position: absolute;
+   left:150px; 
+   bottom:970px;
+   color: rgb(132, 152, 218);
+     }
+    
+  #Login_Info{
+   width:30%;
+   height:30%;
+   font-family:'Titan One',cursive;
+   font-size:35px;
+   font-weight:500;
+   align-content:center;
+   justify-content:center;
+   position: relative;
+   bottom:30px;
+   left:200px;
+   color: rgb(132, 152, 218);
+     }
+    
+  #fname{
+   width: 450px;
+   height:20%;
+   font-family:'Titan One',cursive;
+   font-size:20px;
+   font-weight:500;
+   align-content:center; 
+   justify-content:center;
+   position: absolute;
+   left:80px;
+   top:180px;
+   color: black;
+     }
+    
+  /* #submitButton{
+   width: 55%;
+   height:20%;
+   position: absolute;
+   font-size: 15px;
+   top:250px;
+   left:210px;
+         */
+     }
+    
+  label {
+   width:100%;
+   height:100%;
+   font-family:'Titan One',cursive;
+   font-size:35px;
+   font-weight:500;
+   align-content:center;
+   justify-content:center;
+   position: absolute;
+   top:60px;
+   left:150px;
+   color: rgb(132, 152, 218);
+     }
+      
    
+
+ /*@media screen and (max-width:768px){}*/
   
-  /* added css for game page */
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    border: solid red 1px;
+ @media screen and (max-width:414px){
+     
+  
+.jumbotron {
+  width:100%;
+  text-align: center;
+  background-color: rgb(132, 152, 218);
+  color: rgb(209, 38, 132);
+}
+.display-1 {
+
+	width:40%;
+	height:30%;
+	font-family:'Titan One',cursive;
+	font-size:30px;
+	font-weight:700;
+	align-content:center;
+	justify-content:center;
+  position: relative;
+  left:115px;
+  bottom:20px;
+   }
+
+
+  #headerID{
+  width: 70%;
+	height:30%;
+	font-family:'Titan One',cursive;
+	font-size:15px;
+	font-weight:500;
+	align-content:center;
+	justify-content:center;
+  position: absolute;
+  left:60px; 
+  bottom:490px;
+  color: rgb(132, 152, 218);
   }
-  
-  .leftSideColumn {
-    flex: 1;
+
+  #Login_Info{
+    width:30%;
+    height:30%;
+    font-family:'Titan One',cursive;
+    font-size:25px;
+    font-weight:500;
+    align-content:center;
+    justify-content:center;
+    position: relative;
+    bottom:100px;
+    left:35px;
+    color: rgb(132, 152, 218);
   }
+
+  #fname{
+    width: 150px;
+    height:20%;
+    font-family:'Titan One',cursive;
+    font-size:10px;
+    font-weight:500;
+    align-content:center;
+    justify-content:center;
+    position: absolute;
+    left:95px;
+    top:150px;
+    color: black;
+  }
+
+  /* #submitButton{
+    width: 100%;
+    height:20%;
+    position: absolute;
+    font-size: 15px;
+    top:190px;
+    left:108px;
+    
+  } */
+
+  label {
+    width:100%;
+    height:100%;
+    font-family:'Titan One',cursive;
+    font-size:15px;
+    font-weight:500;
+    align-content:center;
+    justify-content:center;
+    position: absolute;
+    top:60px;
+    left:110px;
+    color: rgb(132, 152, 218);
+  }
+
+  @media screen and (max-width:375px){}
   
-  .rightSideColumn {
-    flex: 1;
+   
   }

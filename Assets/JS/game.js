@@ -4,12 +4,14 @@ var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will 
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
+//Saved information
 var savedNamed=localStorage.getItem("name")
-console.log(savedNamed);
 var savedWordsQty=localStorage.getItem("words")
-console.log(savedWordsQty)
 var savedLanguage=localStorage.getItem("language")
-console.log(savedLanguage)
+//Variable with the rigth word----------------test------------------
+var correctWord="apple"
+//Image API link
+var imageKey="https://api.pexels.com/v1/search?query="+correctWord+"&per_page=1"+"&query=portrait"
 
 //game logic 
 
@@ -24,7 +26,7 @@ function translate(word) {
   var url =
     "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
   url += "&source=EN";
-  url += "&target=FR";
+  url += "&target="+ "FR";
   url += "&q=" + word;
   //gets data from google
   $.get(url, function (returnByGoogle, status) {
@@ -71,9 +73,43 @@ function checkSelection(){
     alert("YOU ARE CORRECT!!!");
   } else {
     alert('NOPE!!!');
+    clearUserSelectionsCheckBox();
   }
 }
+// logic to clear check box on translated words section
+function clearUserSelectionsCheckBox() {
+  //Find the element with the id
+  //Find a way to find all the elements "children" that are LI
+  //Then, set a property named "checked" to false
+  //You do all that in one line of code using JQuery. 
+  //If you look at our code in line 60 you will see an example of doing that to 
+  //another element but basically the same concept. Looking for an element,
+  //finding children and setting a property.
+    $('#translatedWordsList').children('li').children('input').prop('checked', false);
+}
+
 playGame();
+getImage();
 
 
-
+//Function to get and display the picture 
+function getImage() {
+  fetch(imageKey, {
+    method: "GET",
+    headers: {"Authorization": "563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c"}
+  })
+    .then(function (response) {
+    if (response.ok) {
+    console.log(response);
+    response.json().then(function (data) {
+    console.log(data);
+    //Showing the picture
+    var img = $('<img>') 
+    img.attr('src', data.photos[0].url);  
+    img.appendTo("#image") 
+            });
+          } else {
+            console.log("it doesn't")
+          }
+        })
+}
