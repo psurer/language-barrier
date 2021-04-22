@@ -4,12 +4,14 @@ var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will 
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
-var savedNamed=localStorage.getItem("name")
+var savedNamed = localStorage.getItem("name")
 console.log(savedNamed);
-var savedWordsQty=localStorage.getItem("words")
-console.log(savedWordsQty)
-var savedLanguage=localStorage.getItem("language")
-console.log(savedLanguage)
+var savedWordsQty = localStorage.getItem("words")
+console.log(savedWordsQty);
+var savedLanguage = localStorage.getItem("language")
+console.log(savedLanguage);
+var wins = 0;
+var losses = 0;
 
 //game logic 
 function playGame() {
@@ -63,13 +65,28 @@ function whenTranslatedWordIsClicked(word) {
   //now check the result
   checkSelection();
 }
-function checkSelection(){
-  if ( correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
+
+function checkSelection() {
+  if (correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
     alert("YOU ARE CORRECT!!!");
+    wins++;
   } else {
     alert('NOPE!!!');
+    losses++;
     clearUserSelectionsCheckBox();
   }
+  showUserScore();
+  if (wins===words.length) {
+    document.location.href="congrats.html";
+  }
+}
+
+function showUserScore() {
+  $("#right").html(`<h3> wins ${wins} </h3>`);
+  $("#wrong").html(`<h3> losses ${losses} </h3>`);
+  //saves score to local storage
+  localStorage.setItem("wins",wins);
+  localStorage.setItem("losses",losses);
 }
 // logic to clear check box on translated words section
 function clearUserSelectionsCheckBox() {
@@ -80,9 +97,35 @@ function clearUserSelectionsCheckBox() {
   //If you look at our code in line 60 you will see an example of doing that to 
   //another element but basically the same concept. Looking for an element,
   //finding children and setting a property.
-    $('#translatedWordsList').children('li').children('input').prop('checked', false);
+  $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
+//Image API link
+//Function to get and display the picture 
+function getImage(correctWord) {
+  const myHeaders = new Headers();
+  myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
+  myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
+  const imageUrl = `https://api.pexels.com/v1/search?query=${correctWord}&per_page=1`;
+  fetch(imageUrl, {
+    mode: 'cors', // Adding the fetch mode to use cors
+    method: "GET",
+    headers: myHeaders // Adding the fetch call headers.
+  }).then(function (response) {
+    if (response.ok) {
+      console.log(response);
+      response.json().then(function (data) {
+        console.log(data);
+        //Showing the picture
+        $('img').attr('src', data.photos[0].src.small); // here I am adding the photo url to the image sample tag
+      });
+    } else {
+      console.log(response);
+    }
+  }).catch(
+    function (error, status) {
+      console.log(error);
+      console.log(status);
+    });
+}
+getImage("apple"); // Call to test your code.
 playGame();
-
-
-

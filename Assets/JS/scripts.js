@@ -26,7 +26,6 @@ $("#select-bar").on("change", function(event){
     //Saving the value into the local storage
     localStorage.setItem("language", JSON.stringify(userLanguage));
     console.log(localStorage.getItem("language"))
-
 })
 
 //login button
