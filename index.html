@@ -19,11 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Assets/CSS/styles.css" />
-
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
     <!-- CSS stylesheet for Modal-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  
@@ -39,23 +36,24 @@
     <p id="currentDay" class="lead"></p>
   </header>
 
-<!-- Start Button-->
+  <!-- Start Button-->
   <div class="w3-bottom w3-center">
     <div class="w3-bar">
    <!-- Modal Button Start ***CHANGE ID** "id01 is found in lines 43,46"-->
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
-    </div>
+   <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
   </div>
+</div>
+
 
     <!-- Start of Modal Code-->
     <div id="id01" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-deep-purple" style="max-width:600px">
-  <!-- Login Button-->
+  <!-- Login Button
         <div class="w3-center "><br>
           <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-        </div>
+        </div>-->
   <!-- Code for Login Card-->
-        <form class="w3-container w3-deep-purple" >
+        <div class="w3-container w3-deep-purple" >
           <div class="w3-section ">
     <!-- First Name-->
             <input  class="w3-input w3-border w3-margin-bottom " type="text" placeholder="Enter First Name" name="FName" id="fname" required>
@@ -71,10 +69,12 @@
           <!-- Words to learn for today input-->
             <input id="words" class="w3-input " type="number" min="1" max="10" placeholder="How many words do you want to learn today?" required></button>
             <!-- Start Button-->
+          
             <button class="w3-button w3-block w3-green w3-section w3-padding" 
             type="submit" id="startGame">Start</button>
+          
           </div>
-        </form>
+        </div>
       
       </div>
   </div> 

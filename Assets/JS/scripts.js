@@ -42,10 +42,11 @@ $("#words").on("change", function(event) {
   var userLanguage=$("#select-bar").val()
   var userLastName=$("#lastName").val()
   var userName=$("#fname").val()
-  var wordQty=$("#languageInput").val()
-  if(userLanguage && userLastName && userName) {
-    document.location.replace("game_page.html")
-  }
+  var wordQty=$("#words").val()
+  console.log("---->", userLanguage, userLastName, userName)
+if(userLanguage && userLastName && userName && wordQty) {
+   console.log("REPLACE")
+    window.location.href="game_page.html"
+ }
  
  })
- 
