@@ -25,7 +25,7 @@ function translate(word) {
   var url =
     "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
   url += "&source=EN";
-  url += "&target=FR";
+  url += "&target="+ "FR";
   url += "&q=" + word;
   //gets data from google
   $.get(url, function (returnByGoogle, status) {
@@ -101,6 +101,7 @@ function clearUserSelectionsCheckBox() {
   $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
 playGame();
+getImage();
 
 // //Image API link
 // //Function to get and display the picture 
