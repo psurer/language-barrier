@@ -12,7 +12,6 @@ var savedLanguage=localStorage.getItem("language")
 console.log(savedLanguage)
 
 //game logic 
-
 function playGame() {
   for (var index = 0; index < words.length; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
@@ -59,13 +58,11 @@ function whenSourceWordIsClicked(word) {
   //enable target words list
   $('#translatedWordsList').children('li').children('input').prop('disabled', false);
 }
-
 function whenTranslatedWordIsClicked(word) {
   selectedTargetWord = word;
   //now check the result
   checkSelection();
 }
-
 function checkSelection(){
   if ( correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
     alert("YOU ARE CORRECT!!!");
@@ -85,7 +82,6 @@ function clearUserSelectionsCheckBox() {
   //finding children and setting a property.
     $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
-
 playGame();
 
 
