@@ -14,6 +14,11 @@
 .rightSideColumn {
   flex: 1;
 }
+
+.scratched {
+  text-decoration: line-through;
+}
+
 /* @import url('https://fonts.googleapis.com/css?family=Titan+One');
 
 body{
@@ -63,4 +68,4 @@ body{
 
   @media screen and (max-width:414px){
 
-  } */ */
+  } 

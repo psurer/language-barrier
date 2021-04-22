@@ -4,17 +4,16 @@ var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will 
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
-//Saved information
-var savedNamed=localStorage.getItem("name")
-var savedWordsQty=localStorage.getItem("words")
-var savedLanguage=localStorage.getItem("language")
-//Variable with the rigth word----------------test------------------
-var correctWord="apple"
-//Image API link
-var imageKey="https://api.pexels.com/v1/search?query="+correctWord+"&per_page=1"+"&query=portrait"
+var savedNamed = localStorage.getItem("name")
+console.log(savedNamed);
+var savedWordsQty = localStorage.getItem("words")
+console.log(savedWordsQty);
+var savedLanguage = localStorage.getItem("language")
+console.log(savedLanguage);
+var wins = 0;
+var losses = 0;
 
 //game logic 
-
 function playGame() {
   for (var index = 0; index < words.length; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
@@ -47,11 +46,11 @@ function translate(word) {
 function displayWordsToUser(word, elementID) {
   if ('#translatedWordsList' === elementID) {
     $(elementID).append(
-      `<li><input type="checkbox" disabled onclick="whenTranslatedWordIsClicked('${word}')"/>${word}</li>`
+      `<li id="${word}"><input type="checkbox" disabled onclick="whenTranslatedWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
     );
   } else {
     $(elementID).append(
-      `<li><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/>${word}</li>`
+      `<li><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
     );
   }
 }
@@ -61,20 +60,34 @@ function whenSourceWordIsClicked(word) {
   //enable target words list
   $('#translatedWordsList').children('li').children('input').prop('disabled', false);
 }
-
 function whenTranslatedWordIsClicked(word) {
   selectedTargetWord = word;
   //now check the result
   checkSelection();
 }
 
-function checkSelection(){
-  if ( correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
-    alert("YOU ARE CORRECT!!!");
+function checkSelection() {
+  if (correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
+    wins++;
+    //I will scratch the word 
+    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true);
+
   } else {
-    alert('NOPE!!!');
+    losses++;
     clearUserSelectionsCheckBox();
   }
+  showUserScore();
+  if (wins===words.length) {
+    document.location.href="congrats.html";
+  }
+}
+
+function showUserScore() {
+  $("#right").html(`<h3> wins ${wins} </h3>`);
+  $("#wrong").html(`<h3> losses ${losses} </h3>`);
+  //saves score to local storage
+  localStorage.setItem("wins",wins);
+  localStorage.setItem("losses",losses);
 }
 // logic to clear check box on translated words section
 function clearUserSelectionsCheckBox() {
@@ -85,31 +98,37 @@ function clearUserSelectionsCheckBox() {
   //If you look at our code in line 60 you will see an example of doing that to 
   //another element but basically the same concept. Looking for an element,
   //finding children and setting a property.
-    $('#translatedWordsList').children('li').children('input').prop('checked', false);
+  $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
-
 playGame();
 getImage();
 
-
-//Function to get and display the picture 
-function getImage() {
-  fetch(imageKey, {
-    method: "GET",
-    headers: {"Authorization": "563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c"}
-  })
-    .then(function (response) {
-    if (response.ok) {
-    console.log(response);
-    response.json().then(function (data) {
-    console.log(data);
-    //Showing the picture
-    var img = $('<img>') 
-    img.attr('src', data.photos[0].url);  
-    img.appendTo("#image") 
-            });
-          } else {
-            console.log("it doesn't")
-          }
-        })
-}
+// //Image API link
+// //Function to get and display the picture 
+// function getImage(correctWord) {
+//   const myHeaders = new Headers();
+//   myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
+//   myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
+//   const imageUrl = `https://api.pexels.com/v1/search?query=${correctWord}&per_page=1`;
+//   fetch(imageUrl, {
+//     mode: 'cors', // Adding the fetch mode to use cors
+//     method: "GET",
+//     headers: myHeaders // Adding the fetch call headers.
+//   }).then(function (response) {
+//     if (response.ok) {
+//       console.log(response);
+//       response.json().then(function (data) {
+//         console.log(data);
+//         //Showing the picture
+//         $('img').attr('src', data.photos[0].src.small); // here I am adding the photo url to the image sample tag
+//       });
+//     } else {
+//       console.log(response);
+//     }
+//   }).catch(
+//     function (error, status) {
+//       console.log(error);
+//       console.log(status);
+//     });
+// }
+// getImage("apple"); // Call to test your code.
