@@ -75,5 +75,7 @@ function checkSelection(){
 }
 playGame();
 
+//Go back and forth between the congrats page and game page
+//document.location.replace("game_page.html")
 
 
