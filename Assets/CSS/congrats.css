@@ -2,18 +2,24 @@
 body{
   background-color:rgb(209, 38, 132); 
 }
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+
+
+
 @media screen and (max-width: 1920px){
-    #Congratulations {
-        font-family:'Titan One',cursive;
-        font-size: 50px;
-  flex-flow:row wrap;
-	align-content:center;
-	justify-content:center;
-  position: relative;
-  top:80px;
-  left:750px;
-  right:200px;
-    }
+#Congratulations {
+font-family:'Titan One',cursive;
+text-align: center;
+font-size: 50px;
+flex: 1;
+}
+
 
     #learningButton {
         width:20%;

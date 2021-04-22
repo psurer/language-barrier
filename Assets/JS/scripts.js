@@ -6,6 +6,8 @@ $("#select-bar").on("change", function(event){
     //Saving the value into the local storage
     localStorage.setItem("language", JSON.stringify(userLanguage));
     console.log(localStorage.getItem("language"))
+<<<<<<< HEAD
+=======
 })
 
 //Saving the user name
@@ -16,6 +18,7 @@ $("#fname").on("change", function(event) {
   //Saving the value into the local storage
   localStorage.setItem("name", JSON.stringify(userName));
   console.log(localStorage.getItem("name"))
+>>>>>>> main
 })
 
 //Saving the user last name
