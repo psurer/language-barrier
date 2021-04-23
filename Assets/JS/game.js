@@ -101,34 +101,37 @@ function clearUserSelectionsCheckBox() {
   $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
 playGame();
-getImage();
+correctWord=$(`#${selectedTargetWord}`)
+getImage(correctWord);
 
-// //Image API link
-// //Function to get and display the picture 
-// function getImage(correctWord) {
-//   const myHeaders = new Headers();
-//   myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
-//   myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
-//   const imageUrl = `https://api.pexels.com/v1/search?query=${correctWord}&per_page=1`;
-//   fetch(imageUrl, {
-//     mode: 'cors', // Adding the fetch mode to use cors
-//     method: "GET",
-//     headers: myHeaders // Adding the fetch call headers.
-//   }).then(function (response) {
-//     if (response.ok) {
-//       console.log(response);
-//       response.json().then(function (data) {
-//         console.log(data);
-//         //Showing the picture
-//         $('img').attr('src', data.photos[0].src.small); // here I am adding the photo url to the image sample tag
-//       });
-//     } else {
-//       console.log(response);
-//     }
-//   }).catch(
-//     function (error, status) {
-//       console.log(error);
-//       console.log(status);
-//     });
-// }
-// getImage("apple"); // Call to test your code.
+//Image API link
+ //Function to get and display the picture 
+function getImage(correctWord) {
+const myHeaders = new Headers();
+myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
+myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
+const imageUrl = "https://api.pexels.com/v1/search?query="+correctWord+"&per_page=1";
+fetch(imageUrl, {
+mode: 'cors', // Adding the fetch mode to use cors
+method: "GET",
+headers: myHeaders // Adding the fetch call headers.
+   }).then(function (response) {
+if (response.ok) {
+console.log(response);
+response.json().then(function (data) {
+console.log(data);
+//Showing the picture
+$('image').attr('src', data.photos[0].src.original); // here I am adding the photo url to the image sample tag
+
+})
+}
+else {
+console.log(response);
+ }}).catch(
+function (error, status) {
+console.log(error);
+console.log(status);
+    });
+}
+
+// Call to test your code.
