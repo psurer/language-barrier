@@ -4,17 +4,18 @@ var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will 
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
+var selectedLanguage = '' ; /// use to save the language choosen by the user ( portuguese, spanish , frech)
 var savedNamed = localStorage.getItem("name")
 console.log(savedNamed);
 var savedWordsQty = localStorage.getItem("words")
 console.log(savedWordsQty);
 var savedLanguage = localStorage.getItem("language")
-console.log(savedLanguage);
 var wins = 0;
 var losses = 0;
 
 //game logic 
 function playGame() {
+  initGameBoard();// Clean the board so we can start the game.
   for (var index = 0; index < words.length; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
     translate(words[index]); // calls function translate to display the words
@@ -25,7 +26,7 @@ function translate(word) {
   var url =
     "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
   url += "&source=EN";
-  url += "&target="+ "FR";
+  url += "&target="+ savedLanguage.toLocaleLowerCase();
   url += "&q=" + word;
   //gets data from google
   $.get(url, function (returnByGoogle, status) {
@@ -50,7 +51,7 @@ function displayWordsToUser(word, elementID) {
     );
   } else {
     $(elementID).append(
-      `<li><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
+      `<li id="${word}"><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
     );
   }
 }
@@ -69,14 +70,9 @@ function whenTranslatedWordIsClicked(word) {
 function checkSelection() {
   if (correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
     wins++;
-    //I will scratch the word 
-    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true);
-   //Adding the image of the selected word
-   correctWord=$(`#${selectedSourceWord}`).selector
-   //removing the # from the selector
-   var imageWord = correctWord.replace('#','');
-   console.log(imageWord);  
-   getImage(imageWord);
+    //I will scratch the words
+    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);;
+    $(`#${selectedSourceWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);
 
   } else {
     losses++;
@@ -106,16 +102,21 @@ function clearUserSelectionsCheckBox() {
   //finding children and setting a property.
   $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
+
+function initGameBoard(){
+  $('#translatedWordsList').html(null);
+  $('#wordsToTranslate').html(null);
+}
+
 playGame();
 
-
+//getImage();
 
 //Listening the user selection
 //$(`#${selectedTargetWord}`).on("click", function(){
   //correctWord=$(`#${selectedTargetWord}`)
   //console.log("test")
   //getImage(correctWord);
-
 
 //Image API link
  //Function to get and display the picture 

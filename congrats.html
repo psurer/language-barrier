@@ -8,16 +8,21 @@
     <link rel="stylesheet" href="Assets/CSS/congrats.css">
 </head>
 <body>
-    <div class="mainContainer">
-        <header id="Congratulations"> Congratulations!</header>
+    <header id="Congratulations"> Congratulations!</header>
         <p id="output_text"></p>
+    <div class="mainContainer">
+        <!-- <header id="Congratulations"> Congratulations!</header>
+        <p id="output_text"></p> -->
         <!-- Button Keep learning href is empty and ID is empty -->
         <button onclick="goTo()" type="button"> Keep learning? </button>
         <!-- Button for the the day -->
         <!--  href is empty and ID is empty -->
+        <aside class="leftSideColumn"> 
+            <div id="wins" class="score"></div>
+        <aside class="rightSideColumn"> 
+            <div id="losses" class="score"></div>
+        </aside>
     </div>
-    <div id="wins"></div>
-    <div id="losses"></div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="Assets/JS/congrats_page.js"></script>
 </body>
