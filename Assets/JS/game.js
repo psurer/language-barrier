@@ -4,6 +4,7 @@ var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will 
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
+var selectedLanguage = '' ; /// use to save the language choosen by the user ( portuguese, spanish , frech)
 var savedNamed = localStorage.getItem("name")
 console.log(savedNamed);
 var savedWordsQty = localStorage.getItem("words")
@@ -15,6 +16,7 @@ var losses = 0;
 
 //game logic 
 function playGame() {
+  initGameBoard();// Clean the board so we can start the game.
   for (var index = 0; index < words.length; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
     translate(words[index]); // calls function translate to display the words
@@ -25,7 +27,7 @@ function translate(word) {
   var url =
     "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
   url += "&source=EN";
-  url += "&target="+ "FR";
+  url += "&target="+ selectedLanguage;
   url += "&q=" + word;
   //gets data from google
   $.get(url, function (returnByGoogle, status) {
@@ -50,7 +52,7 @@ function displayWordsToUser(word, elementID) {
     );
   } else {
     $(elementID).append(
-      `<li><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
+      `<li id="${word}"><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
     );
   }
 }
@@ -69,8 +71,9 @@ function whenTranslatedWordIsClicked(word) {
 function checkSelection() {
   if (correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
     wins++;
-    //I will scratch the word 
-    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true);
+    //I will scratch the words
+    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);;
+    $(`#${selectedSourceWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);
 
   } else {
     losses++;
@@ -100,8 +103,27 @@ function clearUserSelectionsCheckBox() {
   //finding children and setting a property.
   $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
-playGame();
-getImage();
+
+function initGameBoard(){
+  $('#translatedWordsList').html(null);
+  $('#wordsToTranslate').html(null);
+}
+
+function initEventHandlers(){
+  //Select Language 
+  $('#selectedLanguage').change(function (data)
+  {
+    //Get the selected value, french, spainsh, portuguese
+    selectedLanguage = $(this).children("option:selected").val();
+    playGame();
+  });
+}
+
+initEventHandlers();
+
+
+
+//getImage();
 
 // //Image API link
 // //Function to get and display the picture 

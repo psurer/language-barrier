@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
+
 body{
   background-color:rgb(209, 38, 132); 
 }
+
 .mainContainer {
     display: flex;
     flex-direction: column;
@@ -9,8 +11,15 @@ body{
     margin: auto;
     justify-content: center;
 }
+    
+.leftSideColumn {
+flex: 1;
+margin-left: 5px;
+}
 
-
+.rightSideColumn {
+flex: 1;
+}
 
 @media screen and (max-width: 1920px){
 #Congratulations {
@@ -21,227 +30,220 @@ flex: 1;
 }
 
 
-    #learningButton {
-        width:20%;
-    height:30%;
-    padding:10px;
-    font-family:'Titan One',cursive;
-    font-size:10px;
-    font-weight:50;
-    align-content:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    position: relative;
-     right:180px;
-    top:40px;
-    color: black; 
-    }
+#learningButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:180px;
+top:40px;
+color: black; 
+}
 
-    #logButton {
-        width:20%;
-        height:30%;
-        padding:10px;
-        font-family:'Titan One',cursive;
-        font-size:10px;
-        font-weight:50;
-        align-content:center;
-        justify-content:center;
-        flex-flow:row wrap;
-        position: relative;
-        right:110px;
-        top:40px;
-        color: black; 
-    }
+#logButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:110px;
+top:40px;
+color: black; 
+}
 }
 
 @media screen and (max-width: 1024px) {
-    #Congratulations {
-        font-family:'Titan One',cursive;
-        font-size: 50px;
-  flex-flow:row wrap;
-	align-content:center;
-	justify-content:center;
-  position: relative;
-  top:80px;
-  left:400px;
-    }
+#Congratulations {
+font-family:'Titan One',cursive;
+font-size: 50px;
+flex-flow:row wrap;
+align-content:center;
+justify-content:center;
+position: relative;
+top:80px;
+left:400px;
+}
 
-    #learningButton {
-        width:20%;
-    height:30%;
-    padding:10px;
-    font-family:'Titan One',cursive;
-    font-size:10px;
-    font-weight:50;
-    align-content:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    position: relative;
-    right:10px;
-    left:25px;
-    top:40px;
-    color: black; 
-    }
+#learningButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:10px;
+left:25px;
+top:40px;
+color: black; 
+}
 
-    #logButton {
-        width:20%;
-        height:30%;
-        padding:10px;
-        font-family:'Titan One',cursive;
-        font-size:10px;
-        font-weight:50;
-        align-content:center;
-        justify-content:center;
-        flex-flow:row wrap;
-        position: relative;
-        right:10px;
-        left: 30px;
-        top:40px;
-        color: black; 
-    }
-
-
+#logButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:10px;
+left: 30px;
+top:40px;
+color: black; 
+}
 }
 
 @media screen and (max-width: 768px) {
-    #Congratulations {
-        font-family:'Titan One',cursive;
-        font-size: 50px;
-  flex-flow:row wrap;
-	align-content:center;
-	justify-content:center;
-  position: relative;
-  left: 160px;
-    }
-
-    #learningButton {
-        width:20%;
-    height:30%;
-    padding:10px;
-    font-family:'Titan One',cursive;
-    font-size:10px;
-    font-weight:50;
-    align-content:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    position: relative;
-    left:70px;
-    top:5px;
-    color: black; 
-    }
-
-    #logButton {
-        width:20%;
-        height:30%;
-        padding:10px;
-        font-family:'Titan One',cursive;
-        font-size:10px;
-        font-weight:50;
-        align-content:center;
-        justify-content:center;
-        flex-flow:row wrap;
-        position: relative;
-        left:70px;
-        top:5px;
-        color: black; 
-    }
+#Congratulations {
+font-family:'Titan One',cursive;
+font-size: 50px;
+flex-flow:row wrap;
+align-content:center;
+justify-content:center;
+position: relative;
+left: 160px;
 }
 
+#learningButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+left:70px;
+top:5px;
+color: black; 
+}
+
+#logButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+left:70px;
+top:5px;
+color: black; 
+}
+}
 @media screen and (max-width: 414px) {
-    
-    
-    #Congratulations {
-        font-family:'Titan One',cursive;
-        font-size: 25px;
-  flex-flow:row wrap;
-	align-content:center;
-	justify-content:center;
-  position: relative;
-  top:80px;
-  left:50px;
-    }
-
-    #learningButton {
-        width:20%;
-    height:30%;
-    padding:5px;
-    font-family:'Titan One',cursive;
-    font-size:10px;
-    font-weight:50;
-    align-content:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    position: relative;
-    right:30px;
-    left:35px;
-    top:40px;
-    color:black; 
-    }
-
-    #logButton {
-        width:20%;
-        height:30%;
-        padding:5px;
-        font-family:'Titan One',cursive;
-        font-size:10px;
-        font-weight:50;
-        align-content:center;
-        justify-content:center;
-        flex-flow:row wrap;
-        position: relative;
-        right:10px;
-        left: 50px;
-        top:40px;
-        color: black; 
-    }
+#Congratulations {
+font-family:'Titan One',cursive;
+font-size: 25px;
+flex-flow:row wrap;
+align-content:center;
+justify-content:center;
+position: relative;
+top:80px;
+left:50px;
 }
 
+#learningButton {
+width:20%;
+height:30%;
+padding:5px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:30px;
+left:35px;
+top:40px;
+color:black; 
+}
+
+#logButton {
+width:20%;
+height:30%;
+padding:5px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:10px;
+left: 50px;
+top:40px;
+color: black; 
+}
+}
 @media screen and (max-width: 375px){
-    
-    
-    #Congratulations {
-        font-family:'Titan One',cursive;
-        font-size: 30px;
-  flex-flow:row wrap;
-	align-content:center;
-	justify-content:center;
-  position: relative;
-  top:80px;
-  left:80px;
-  right: 20px;
-    }
 
-    #learningButton {
-        width:20%;
-    height:30%;
-    padding:10px;
-    font-family:'Titan One',cursive;
-    font-size:10px;
-    font-weight:50;
-    align-content:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    position: relative;
-    right:100px;
-    left:50px;
-    top:40px;
-    color: black; 
-    }
+#Congratulations {
+font-family:'Titan One',cursive;
+font-size: 30px;
+flex-flow:row wrap;
+align-content:center;
+justify-content:center;
+position: relative;
+top:80px;
+left:80px;
+right: 20px;
+}
 
-    #logButton {
-        width:20%;
-        height:30%;
-        padding:10px;
-        font-family:'Titan One',cursive;
-        font-size:10px;
-        font-weight:50;
-        align-content:center;
-        justify-content:center;
-        flex-flow:row wrap;
-        position: relative;
-        right:120px;
-        left: 80px;
-        top:40px;
-        color: black; 
-    }
+#learningButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:100px;
+left:50px;
+top:40px;
+color: black; 
+}
+
+#logButton {
+width:20%;
+height:30%;
+padding:10px;
+font-family:'Titan One',cursive;
+font-size:10px;
+font-weight:50;
+align-content:center;
+justify-content:center;
+flex-flow:row wrap;
+position: relative;
+right:120px;
+left: 80px;
+top:40px;
+color: black; 
+}
 }
