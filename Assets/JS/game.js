@@ -72,9 +72,11 @@ function checkSelection() {
     //I will scratch the word 
     $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true);
    //Adding the image of the selected word
-   correctWord=$(`#${selectedSourceWord}`))
-   console.log(correctWord)
-   getImage(correctWord);
+   correctWord=$(`#${selectedSourceWord}`).selector
+   //removing the # from the selector
+   var imageWord = correctWord.replace('#','');
+   console.log(imageWord);  
+   getImage(imageWord);
 
   } else {
     losses++;
@@ -117,11 +119,11 @@ playGame();
 
 //Image API link
  //Function to get and display the picture 
-  function getImage(correctWord) {
+  function getImage(imageWord) {
   const myHeaders = new Headers();
   myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
   myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
-  const imageUrl = "https://api.pexels.com/v1/search?query="+correctWord+"&per_page=1";
+  const imageUrl = "https://api.pexels.com/v1/search?query="+imageWord+"&per_page=1";
   console.log(imageUrl)
   fetch(imageUrl, {
   mode: 'cors', // Adding the fetch mode to use cors
@@ -133,7 +135,7 @@ playGame();
   response.json().then(function (data) {
   console.log(data);
   //Showing the picture
-  $('#image').attr('src', data.photos[0].src.small); // here I am adding the photo url to the image sample tag
+  $('#image').attr('src', data.photos[0].src.medium); // here I am adding the photo url to the image sample tag
   
   })
   }
