@@ -121,7 +121,7 @@ console.log(response);
 response.json().then(function (data) {
 console.log(data);
 //Showing the picture
-$('image').attr('src', data.photos[0].src.original); // here I am adding the photo url to the image sample tag
+$('#image').attr('src', data.photos[0].src.original); // here I am adding the photo url to the image sample tag
 
 })
 }
