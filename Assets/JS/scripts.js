@@ -4,7 +4,7 @@ $("#select-bar").on("change", function(event){
       userLanguage=$("#select-bar").val()
       console.log(userLanguage)
     //Saving the value into the local storage
-    localStorage.setItem("language", JSON.stringify(userLanguage));
+    localStorage.setItem("language", userLanguage);
     console.log(localStorage.getItem("language"))
 })
 

@@ -10,7 +10,6 @@ console.log(savedNamed);
 var savedWordsQty = localStorage.getItem("words")
 console.log(savedWordsQty);
 var savedLanguage = localStorage.getItem("language")
-console.log(savedLanguage);
 var wins = 0;
 var losses = 0;
 
@@ -27,7 +26,7 @@ function translate(word) {
   var url =
     "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
   url += "&source=EN";
-  url += "&target="+ selectedLanguage;
+  url += "&target="+ savedLanguage.toLocaleLowerCase();
   url += "&q=" + word;
   //gets data from google
   $.get(url, function (returnByGoogle, status) {
@@ -109,17 +108,7 @@ function initGameBoard(){
   $('#wordsToTranslate').html(null);
 }
 
-function initEventHandlers(){
-  //Select Language 
-  $('#selectedLanguage').change(function (data)
-  {
-    //Get the selected value, french, spainsh, portuguese
-    selectedLanguage = $(this).children("option:selected").val();
-    playGame();
-  });
-}
-
-initEventHandlers();
+playGame();
 
 
 
