@@ -6,8 +6,6 @@ $("#select-bar").on("change", function(event){
     //Saving the value into the local storage
     localStorage.setItem("language", JSON.stringify(userLanguage));
     console.log(localStorage.getItem("language"))
-<<<<<<< HEAD
-=======
 })
 
 //Saving the user name
@@ -18,7 +16,6 @@ $("#fname").on("change", function(event) {
   //Saving the value into the local storage
   localStorage.setItem("name", JSON.stringify(userName));
   console.log(localStorage.getItem("name"))
->>>>>>> main
 })
 
 //Saving the user last name
@@ -45,10 +42,11 @@ $("#words").on("change", function(event) {
   var userLanguage=$("#select-bar").val()
   var userLastName=$("#lastName").val()
   var userName=$("#fname").val()
-  var wordQty=$("#languageInput").val()
-  if(userLanguage && userLastName && userName) {
-    document.location.replace("game_page.html")
-  }
+  var wordQty=$("#words").val()
+  console.log("---->", userLanguage, userLastName, userName)
+if(userLanguage && userLastName && userName && wordQty) {
+   console.log("REPLACE")
+    window.location.href="game_page.html"
+ }
  
  })
- 
