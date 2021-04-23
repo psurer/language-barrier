@@ -10,6 +10,7 @@ body{
     width: 80%;
     margin: auto;
     justify-content: center;
+    align-items: center;
 }
     
 .leftSideColumn {
@@ -19,6 +20,10 @@ margin-left: 5px;
 
 .rightSideColumn {
 flex: 1;
+}
+
+.score {
+  font-size: 30px;
 }
 
 @media screen and (max-width: 1920px){
