@@ -73,7 +73,13 @@ function checkSelection() {
     //I will scratch the words
     $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);;
     $(`#${selectedSourceWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);
-
+   //Adding the image of the selected word
+   correctWord=$(`#${selectedSourceWord}`).selector
+   //removing the # from the selector
+   var imageWord = correctWord.replace('#','');
+   console.log(imageWord);
+   getImage(imageWord);
+   
   } else {
     losses++;
     clearUserSelectionsCheckBox();
