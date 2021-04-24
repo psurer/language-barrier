@@ -1,6 +1,8 @@
 //game logic var
 var translatedWords = []; //array to hold translated words
-var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will come from dictionary API
+var words = ["apple", "strawberry", "bread", "tea", "fish","avocado", "Chicken",
+"grapes", "cucumber", "eggs", "spinach", "tomato", "beef",
+"potatoes", "lemon", "lettuce", "pork","oranges", "mushrooms",]; //these words will come from dictionary API
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
@@ -16,7 +18,8 @@ var losses = 0;
 //game logic 
 function playGame() {
   initGameBoard();// Clean the board so we can start the game.
-  for (var index = 0; index < words.length; index++) { // 
+  const maxNumberOfWords = localStorage.getItem("words");
+  for (var index = 0; index < maxNumberOfWords; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
     translate(words[index]); // calls function translate to display the words
   }
