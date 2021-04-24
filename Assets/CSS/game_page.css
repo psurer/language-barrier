@@ -3,26 +3,18 @@ body{
   background-color:rgb(255, 255, 255); 
 }
 
-
-  
-
-@media screen and (max-width: 1920px) {
-
-  #image{
-    position: relative;
-    left: 800px;
-  }
-
-
 #wordsToTranslate {
-font-size: 30px;
-
-
+  font-size: 30px;
 }
 
 
 #translatedWordsList {
   font-size: 30px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
 }
 
 #langName {
@@ -33,498 +25,13 @@ font-size: 30px;
 }
 
 
-  #header {
-    background-color: rgb(132, 152, 218);
-    padding-bottom: 10px;
-    padding-top: 10px;
-    height: 100px;
-    text-align: center;
-   
-  }
-
-  .mainContainer {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  margin: auto;
-  justify-content: space-around;
-  
-  width:100%;
-	height:100%;
-  font-family:'Titan One',cursive;
-	font-size:20px;
-	font-weight:20;
-	flex-flow:row wrap;
-	align-content:center;
-	
-  flex-flow:row wrap;
-  position: relative;
-  bottom:15px;
- }
-  
- .leftSideColumn {
-  flex: 1;
-  margin-left: 5px;
- padding-bottom: 200px;
- width:100%;
-	
-  height:10%;
-  font-family:'Titan One',cursive;
-	font-size:20px;
-	font-weight:2;
-	flex-flow:row wrap;
-	align-content:center;
-	
-  flex-flow:row wrap;
-  position: relative;
-  /*bottom:5px;*/
-  
- }
-  
- .rightSideColumn {
-  flex: 1;
-  margin-left: 1px;
-  padding-bottom: 200px;
-  width:100%;
-	
-  height:10%;
-  font-family:'Titan One',cursive;
-	font-size:20px;
-	font-weight:2;
-	flex-flow:row wrap;
-	align-content:center;
-	
-  flex-flow:row wrap;
-  position: relative;
-
- 
- }
-
- .scratched {
-  text-decoration: line-through;
-
-  
- }
-}
-
-
-@media screen and (max-width: 1024px) {
-  
-    #image{
-    position: relative;
-    left: 350px;
-  }
-  
-  #wordsToTranslate {
-    font-size: 40px;
-    
-    
-    }
-    
-    
-    #translatedWordsList {
-      font-size: 40px;
-    }
-    
-    
-      #header {
-        background-color: rgb(132, 152, 218);
-        padding-bottom: 0px;
-        padding-top: 0px;
-        height: 80px;
-     }
-
-      #langName {
-        text-align: center;
-        font-family:'Titan One',cursive;
-        font-size: 30px;
-        color: rgb(209, 38, 132); 
-      }
-
-
-
-
-
-
-  
-  
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    justify-content: space-around;
-    
-    width:100%;
-    height:100%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:20;
-    flex-flow:row wrap;
-    align-content:center;
-    flex-flow:row wrap;
-    position: relative;
-    bottom:10px;
-
-    /*padding-bottom: 60px;*/
-   }
-    
-   .leftSideColumn {
-    flex: 1;
-    margin-left: 5px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-    /*bottom:5px;*/
-
-    padding-bottom: 50px;
-    
-   }
-    
-   .rightSideColumn {
-    flex: 1;
-    margin-left: 1px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-    padding-bottom: 50px;
-   
-   }
-  
-   .scratched {
-    text-decoration: line-through;
-  
-    
-  }
-  
-}
-
-
-@media screen and (max-width: 768px) {
-  
-  
-
-  #image{
-    position: relative;
-    left: 200px;
-  }
-
-
-
-  #wordsToTranslate {
-    font-size: 30px;
-    
-    
-    }
-    
-    
-    #translatedWordsList {
-      font-size: 30px;
-    }
-    
-    
-      #header {
-        background-color: rgb(132, 152, 218);
-        padding-bottom: 0px;
-        padding-top: 10px;
-        height: 120px;
-  }
-    
-  
-  
-  
-  
-  
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    justify-content: space-around;
-    background-color: rgb(132, 152, 218);
-    width:100%;
-    height:100%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:20;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-    bottom:15px;
-   }
-    
-   .leftSideColumn {
-    flex: 1;
-    margin-left: 1px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-  
-   
-   }
-    
-   .rightSideColumn {
-    flex: 1;
-    margin-left: 1px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-  
-   
-   }
-  
-   .scratched {
-    text-decoration: line-through;
-  
-    
-   }
-
-}
-
-
-
-@media screen and (max-width: 414px) {
-
-
-  #image{
-    position: relative;
-    left: 100px;
-    flex-shrink: inherit;
-  }
-
-
-  h1 {
-  font-size: 10%;
-
-}
-  #wordsToTranslate {
-    font-size: 15px;
-    
-    
-    }
-    
-    
-    #translatedWordsList {
-      font-size: 15px;
-    }
-    
-    
-      #header {
-        background-color: rgb(132, 152, 218);
-        padding-bottom: 0px;
-        padding-top: 10px;
-        height: 100px;
-        font-size: 20px;
-      }
-     
-  
-  
-  
-  
-  
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    justify-content: space-around;
-    
-    width:100%;
-    height:100%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:20;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-    bottom:15px;
-   }
-    
-   .leftSideColumn {
-    flex: 1;
-    margin-left: 1px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-   }
-    
-   .rightSideColumn {
-    flex: 1;
-    margin-left: 1px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-  
-   
-   }
-  
-   .scratched {
-    text-decoration: line-through;
-  
-    
-   }
-
-
-  
-}
-
-
-@media screen and (max-width: 375px) {
-  
-  #image{
-    position: relative;
-    left: 35px;
-    flex-shrink: inherit;
-  }
-  
-  
-  
-  .mainContainer {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    margin: none;
-    justify-content: space-around;
-   
-    width:80%;
-    height:80%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:20;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-    bottom:15px;
-   }
-
-   #langName{
-     display: 20px;
-   }
-    
-   .leftSideColumn {
-    flex: 1;
-    margin-left: 5px;
-  
-   width:100%;
-    
-    height:10%;
-    font-family:'Titan One',cursive;
-    font-size:20px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-    /*bottom:5px;*/
-    padding-bottom: 50px;
-    margin-bottom:10px ;
-    padding-bottom: 10px;
-    padding-top:10px ;
-   }
-    
-   .rightSideColumn {
-    flex: 1;
-    margin-left: 1px;
-    height: 10px;
-   width:100%;
-    
-    height:20%;
-    font-family:'Titan One',cursive;
-    font-size:25px;
-    font-weight:2;
-    flex-flow:row wrap;
-    align-content:center;
-    
-    flex-flow:row wrap;
-    position: relative;
-  
-   
-   }
-  
-   .scratched {
-    text-decoration: line-through;
-   }
-    
-
-}
-/* @import url('https://fonts.googleapis.com/css?family=Titan+One');
-
-body{
-  background-color:rgb(209, 38, 132); 
-}
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
-
-.mainAppBanner {
+#header {
+  background-color: rgb(132, 152, 218);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 100px;
   text-align: center;
-  border: white solid 2px;
-  font-family:'Titan One',cursive;
-	font-size:20px;
-	font-weight:bold;
+  
 }
 
 .mainContainer {
@@ -532,29 +39,29 @@ body{
   flex-direction: row;
   width: 80%;
   margin: auto;
-  border: solid red 1px;
+  justify-content: space-around;
+  align-items: center;
+  font-family:'Titan One',cursive;
+  font-size:20px;
+  font-weight:20;
 }
-  
+
 .leftSideColumn {
-  flex: 1;
+  width: 300px;
+  font-family:'Titan One',cursive;
+  font-size:20px;
+  font-weight:2;
 }
-  
+
 .rightSideColumn {
-  flex: 1;
+  width: 300px;
+  font-family:'Titan One',cursive;
+  font-size:20px;
+  font-weight:2;
 }
 
-  /* @media screen and (max-width: 1912px){
 
-  }
-
-  @media screen and (max-width: 1024px) {
-
-  }
-
-  @media screen and (max-width:768px){
-
-  }
-
-  @media screen and (max-width:414px){
-
-  } 
+.scratched {
+  color: green;
+  text-decoration: line-through;
+}
