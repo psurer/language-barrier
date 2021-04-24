@@ -1,21 +1,25 @@
 //game logic var
 var translatedWords = []; //array to hold translated words
-var words = ["apple", "strawberry", "bread", "tea", "fish"]; //these words will come from dictionary API
+var words = ["apple", "strawberry", "bread", "tea", "fish","avocado", "Chicken",
+"grapes", "cucumber", "eggs", "spinach", "tomato", "beef",
+"potatoes", "lemon", "lettuce", "pork","oranges", "mushrooms",]; //these words will come from dictionary API
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
+var selectedLanguage = '' ; /// use to save the language choosen by the user ( portuguese, spanish , frech)
 var savedNamed = localStorage.getItem("name")
 console.log(savedNamed);
 var savedWordsQty = localStorage.getItem("words")
 console.log(savedWordsQty);
 var savedLanguage = localStorage.getItem("language")
-console.log(savedLanguage);
 var wins = 0;
 var losses = 0;
 
 //game logic 
 function playGame() {
-  for (var index = 0; index < words.length; index++) { // 
+  initGameBoard();// Clean the board so we can start the game.
+  const maxNumberOfWords = localStorage.getItem("words");
+  for (var index = 0; index < maxNumberOfWords; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
     translate(words[index]); // calls function translate to display the words
   }
@@ -25,7 +29,7 @@ function translate(word) {
   var url =
     "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCv96aME3EBXa609ZV3Pl8Z6rVgFVWmmAc";
   url += "&source=EN";
-  url += "&target="+ "FR";
+  url += "&target="+ savedLanguage.toLocaleLowerCase();
   url += "&q=" + word;
   //gets data from google
   $.get(url, function (returnByGoogle, status) {
@@ -50,7 +54,7 @@ function displayWordsToUser(word, elementID) {
     );
   } else {
     $(elementID).append(
-      `<li><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
+      `<li id="${word}"><input type="checkbox" onclick="whenSourceWordIsClicked('${word}')"/><span style="margin:5px">${word}</span></li>`
     );
   }
 }
@@ -69,9 +73,16 @@ function whenTranslatedWordIsClicked(word) {
 function checkSelection() {
   if (correctAnswers.get(selectedSourceWord) === selectedTargetWord) {
     wins++;
-    //I will scratch the word 
-    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true);
-
+    //I will scratch the words
+    $(`#${selectedTargetWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);;
+    $(`#${selectedSourceWord}`).addClass('scratched').children('input').prop('disabled',true).prop('checked', false);
+   //Adding the image of the selected word
+   correctWord=$(`#${selectedSourceWord}`).selector
+   //removing the # from the selector
+   var imageWord = correctWord.replace('#','');
+   console.log(imageWord);
+   getImage(imageWord);
+   
   } else {
     losses++;
     clearUserSelectionsCheckBox();
@@ -100,35 +111,51 @@ function clearUserSelectionsCheckBox() {
   //finding children and setting a property.
   $('#translatedWordsList').children('li').children('input').prop('checked', false);
 }
-playGame();
-getImage();
 
-// //Image API link
-// //Function to get and display the picture 
-// function getImage(correctWord) {
-//   const myHeaders = new Headers();
-//   myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
-//   myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
-//   const imageUrl = `https://api.pexels.com/v1/search?query=${correctWord}&per_page=1`;
-//   fetch(imageUrl, {
-//     mode: 'cors', // Adding the fetch mode to use cors
-//     method: "GET",
-//     headers: myHeaders // Adding the fetch call headers.
-//   }).then(function (response) {
-//     if (response.ok) {
-//       console.log(response);
-//       response.json().then(function (data) {
-//         console.log(data);
-//         //Showing the picture
-//         $('img').attr('src', data.photos[0].src.small); // here I am adding the photo url to the image sample tag
-//       });
-//     } else {
-//       console.log(response);
-//     }
-//   }).catch(
-//     function (error, status) {
-//       console.log(error);
-//       console.log(status);
-//     });
-// }
-// getImage("apple"); // Call to test your code.
+function initGameBoard(){
+  $('#translatedWordsList').html(null);
+  $('#wordsToTranslate').html(null);
+}
+
+playGame();
+
+//getImage();
+
+//Listening the user selection
+//$(`#${selectedTargetWord}`).on("click", function(){
+  //correctWord=$(`#${selectedTargetWord}`)
+  //console.log("test")
+  //getImage(correctWord);
+
+//Image API link
+ //Function to get and display the picture 
+  function getImage(imageWord) {
+  const myHeaders = new Headers();
+  myHeaders.append('content-type', 'application/json'); // Adding content type to myHeaders
+  myHeaders.append('Authorization','563492ad6f91700001000001067ba0f78afa4701a9963ea68164e74c'); // Adding the API KEY
+  const imageUrl = "https://api.pexels.com/v1/search?query="+imageWord+"&per_page=1";
+  console.log(imageUrl)
+  fetch(imageUrl, {
+  mode: 'cors', // Adding the fetch mode to use cors
+  method: "GET",
+  headers: myHeaders // Adding the fetch call headers.
+     }).then(function (response) {
+  if (response.ok) {
+  console.log(response);
+  response.json().then(function (data) {
+  console.log(data);
+  //Showing the picture
+  $('#image').attr('src', data.photos[0].src.medium); // here I am adding the photo url to the image sample tag
+  
+  })
+  }
+  else {
+  console.log(response);
+   }}).catch(
+  function (error, status) {
+  console.log(error);
+  console.log(status);
+      });
+    }
+
+

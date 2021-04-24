@@ -4,7 +4,7 @@ $("#select-bar").on("change", function(event){
       userLanguage=$("#select-bar").val()
       console.log(userLanguage)
     //Saving the value into the local storage
-    localStorage.setItem("language", JSON.stringify(userLanguage));
+    localStorage.setItem("language", userLanguage);
     console.log(localStorage.getItem("language"))
 })
 
@@ -34,7 +34,7 @@ $("#words").on("change", function(event) {
   wordQty=$("#words").val()
   console.log(wordQty);
      //Saving the value into the local storage
-     localStorage.setItem("words", JSON.stringify(wordQty));
+     localStorage.setItem("words", wordQty);
      console.log(localStorage.getItem("words"))
  })   
 

@@ -40,11 +40,11 @@
   <div class="w3-bottom w3-center">
     <div class="w3-bar">
    <!-- Modal Button Start ***CHANGE ID** "id01 is found in lines 43,46"-->
-   <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
+   <button onclick="document.getElementById('id01').style.display='block'" id="startButton" class="w3-button w3-xlarge  w3-padding-large w3-light-blue">Start</button>
   </div>
 </div>
-
-
+<!--added code for kids image-->
+<img id="loginPhoto" src="./Assets/IMAGES/language-barrier-resized.jpg" alt="kids learning" />
     <!-- Start of Modal Code-->
     <div id="id01" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-deep-purple" style="max-width:600px">
@@ -53,7 +53,8 @@
           <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
         </div>-->
   <!-- Code for Login Card-->
-        <div class="w3-container w3-deep-purple" >
+        <div id="modalContainer" class="w3-container w3-deep-purple" >
+     
           <div class="w3-section ">
     <!-- First Name-->
             <input  class="w3-input w3-border w3-margin-bottom " type="text" placeholder="Enter First Name" name="FName" id="fname" required>
@@ -62,9 +63,9 @@
         <!-- Menu Select for language-->
             <select class="w3-select w3-block w3-border w3-margin-bottom" name="option" id="select-bar" required>
               <option value="" disabled selected>Pick your language</option>
-              <option value=SP>Spanish</option>
-              <option value=FR>French</option>
-              <option value=PT>Portuguese</option>
+              <option value=es>Spanish</option>
+              <option value=fr>French</option>
+              <option value=pt>Portuguese</option>
             </select>
           <!-- Words to learn for today input-->
             <input id="words" class="w3-input " type="number" min="1" max="10" placeholder="How many words do you want to learn today?" required></button>
