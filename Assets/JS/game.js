@@ -18,7 +18,8 @@ var losses = 0;
 //game logic 
 function playGame() {
   initGameBoard();// Clean the board so we can start the game.
-  for (var index = 0; index < words.length; index++) { // 
+  const maxNumberOfWords = localStorage.getItem("words");
+  for (var index = 0; index < maxNumberOfWords; index++) { // 
     displayWordsToUser(words[index], "#wordsToTranslate"); // displays words 
     translate(words[index]); // calls function translate to display the words
   }

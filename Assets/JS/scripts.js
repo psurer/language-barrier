@@ -34,7 +34,7 @@ $("#words").on("change", function(event) {
   wordQty=$("#words").val()
   console.log(wordQty);
      //Saving the value into the local storage
-     localStorage.setItem("words", JSON.stringify(wordQty));
+     localStorage.setItem("words", wordQty);
      console.log(localStorage.getItem("words"))
  })   
 
