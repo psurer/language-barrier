@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
 body{
-  background-color:rgb(209, 38, 132); 
+  background-color:rgb(255, 255, 255); 
 }
 
+
+  
+
 @media screen and (max-width: 1920px) {
+
+  #image{
+    position: relative;
+    left: 800px;
+  }
 
 
 #wordsToTranslate {
@@ -21,6 +29,7 @@ font-size: 30px;
   align-content: center;
   font-family:'Titan One',cursive;
   font-size: 50px;
+  color: rgb(209, 38, 132); 
 }
 
 
@@ -101,6 +110,11 @@ font-size: 30px;
 
 @media screen and (max-width: 1024px) {
   
+    #image{
+    position: relative;
+    left: 350px;
+  }
+  
   #wordsToTranslate {
     font-size: 40px;
     
@@ -124,6 +138,7 @@ font-size: 30px;
         text-align: center;
         font-family:'Titan One',cursive;
         font-size: 30px;
+        color: rgb(209, 38, 132); 
       }
 
 
@@ -206,6 +221,14 @@ font-size: 30px;
 @media screen and (max-width: 768px) {
   
   
+
+  #image{
+    position: relative;
+    left: 200px;
+  }
+
+
+
   #wordsToTranslate {
     font-size: 30px;
     
@@ -252,11 +275,11 @@ font-size: 30px;
     
    .leftSideColumn {
     flex: 1;
-    margin-left: 5px;
+    margin-left: 1px;
   
    width:100%;
     
-    height:10px;
+    height:10%;
     font-family:'Titan One',cursive;
     font-size:20px;
     font-weight:2;
@@ -265,10 +288,8 @@ font-size: 30px;
     
     flex-flow:row wrap;
     position: relative;
-    /*bottom:5px;*/
-    
-
-    padding-bottom: 50px;
+  
+   
    }
     
    .rightSideColumn {
@@ -301,7 +322,16 @@ font-size: 30px;
 
 
 @media screen and (max-width: 414px) {
-h1 {
+
+
+  #image{
+    position: relative;
+    left: 100px;
+    flex-shrink: inherit;
+  }
+
+
+  h1 {
   font-size: 10%;
 
 }
@@ -352,11 +382,11 @@ h1 {
     
    .leftSideColumn {
     flex: 1;
-    margin-left: 5px;
-   
-    width:100%;
+    margin-left: 1px;
+  
+   width:100%;
     
-    height:10px;
+    height:10%;
     font-family:'Titan One',cursive;
     font-size:20px;
     font-weight:2;
@@ -365,10 +395,6 @@ h1 {
     
     flex-flow:row wrap;
     position: relative;
-    /*bottom:5px;*/
-    
-
-    padding-bottom: 50px;
    }
     
    .rightSideColumn {
@@ -402,6 +428,15 @@ h1 {
 
 
 @media screen and (max-width: 375px) {
+  
+  #image{
+    position: relative;
+    left: 35px;
+    flex-shrink: inherit;
+  }
+  
+  
+  
   .mainContainer {
     display: flex;
     flex-direction: row;
@@ -442,7 +477,10 @@ h1 {
     flex-flow:row wrap;
     position: relative;
     /*bottom:5px;*/
-    
+    padding-bottom: 50px;
+    margin-bottom:10px ;
+    padding-bottom: 10px;
+    padding-top:10px ;
    }
     
    .rightSideColumn {
