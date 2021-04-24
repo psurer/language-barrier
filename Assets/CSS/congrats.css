@@ -26,11 +26,13 @@ flex: 1;
   font-size: 30px;
 }
 
+
 @media screen and (max-width: 1920px){
 #Congratulations {
 font-family:'Titan One',cursive;
 text-align: center;
-font-size: 50px;
+margin-top: 300px;
+font-size: 100px;
 flex: 1;
 }
 
@@ -112,7 +114,7 @@ right:10px;
 left: 30px;
 top:40px;
 color: black; 
-}
+ }
 }
 
 @media screen and (max-width: 768px) {
