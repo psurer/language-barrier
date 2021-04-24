@@ -1,8 +1,6 @@
 //game logic var
 var translatedWords = []; //array to hold translated words
-var words = ["apple", "strawberry", "bread", "tea", "fish","avocado", "Chicken",
-"grapes", "cucumber", "eggs", "spinach", "tomato", "beef",
-"potatoes", "lemon", "lettuce", "pork","oranges", "mushrooms",]; //these words will come from dictionary API
+var words = ["apple", "strawberry", "bread", "tea", "fish","avocado", "Chicken","grapes", "cucumber", "eggs", "spinach", "tomato", "beef","potatoes", "lemon", "lettuce", "pork","oranges", "mushrooms",]; //these words will come from dictionary API
 var correctAnswers = new Map(); // dictionary , key will be english source word, value will be correct translated word
 var selectedSourceWord = ''; // used to save the selected english word.
 var selectedTargetWord = ''; // used to save the target language word.
@@ -88,8 +86,9 @@ function checkSelection() {
     clearUserSelectionsCheckBox();
   }
   showUserScore();
-  if (wins===words.length) {
-    document.location.href="congrats.html";
+  const maxNumberOfWords = localStorage.getItem("words");
+  if (wins == maxNumberOfWords) {
+     window.location.href="congrats.html";
   }
 }
 
